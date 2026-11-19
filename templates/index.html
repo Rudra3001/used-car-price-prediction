@@ -1,0 +1,2261 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+  <meta charset="utf-8"/>
+  <title>CARPRICE AI — Indian Used Car Valuation Studio (₹ INR)</title>
+  <link rel="icon" type="image/png" href="static/favicon.png"/>
+  <link rel="shortcut icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" href="static/logo.jpg"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Geist:wght@300;400;500;600;700&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;background:#030704;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Custom range slider styling for electric lime theme */
+input[type=range] {
+  -webkit-appearance: none;
+  background: rgba(30, 48, 30, 0.6);
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #a3e635;
+  box-shadow: 0 0 12px #a3e635, 0 0 4px #84cc16;
+  cursor: pointer;
+  border: 2px solid #040704;
+  margin-top: -5px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #152417;
+  border-radius: 9999px;
+  border: 1px solid rgba(163, 230, 53, 0.25);
+}
+.cyber-glass {
+  background: rgba(10, 24, 14, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(163, 230, 53, 0.22);
+}
+.cyber-glass-deep {
+  background: rgba(5, 14, 8, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+.neon-lime-glow {
+  text-shadow: 0 0 16px rgba(163, 230, 53, 0.6), 0 0 30px rgba(74, 222, 128, 0.35);
+}
+.lime-box-glow {
+  box-shadow: 0 0 25px rgba(163, 230, 53, 0.45);
+}
+.lime-box-glow-lg {
+  box-shadow: 0 0 35px rgba(163, 230, 53, 0.55), inset 0 0 15px rgba(163, 230, 53, 0.2);
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 15px rgba(163, 230, 53, 0.6)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 30px rgba(163, 230, 53, 0.95)); }
+}
+.vortex-pulse {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+    /* Fix native select arrow overlap */
+    select {
+      -webkit-appearance: none !important;
+      -moz-appearance: none !important;
+      appearance: none !important;
+      background-image: none !important;
+    }
+    select::-ms-expand {
+      display: none !important;
+    }
+
+  </style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-tint":"#98da27","on-secondary":"#003824","secondary-container":"#005a38","on-tertiary-fixed-variant":"#005321","surface-container-low":"#071209","background":"#030704","primary-fixed":"#b2f746","primary-fixed-dim":"#98da27","surface-container-high":"#112918","on-surface-variant":"#9bb59c","tertiary-container":"#15803d","on-primary-fixed-variant":"#334f00","error":"#ffb4ab","on-primary-fixed":"#121f00","on-background":"#e2fce6","on-error-container":"#ffdad6","outline":"#48684d","tertiary":"#4ade80","surface-container-lowest":"#020603","tertiary-fixed":"#6bff8f","outline-variant":"#1e3b24","surface-variant":"#0e2213","on-primary-container":"#081e04","inverse-surface":"#dfe4db","secondary-fixed":"#6ffbbe","inverse-on-surface":"#2c322c","surface-bright":"#1a3d24","on-primary":"#081e04","surface-dim":"#040804","on-tertiary":"#003915","secondary-fixed-dim":"#4edea3","error-container":"#93000a","primary-container":"#a3e635","surface":"#040704","inverse-primary":"#446900","on-secondary-fixed-variant":"#005236","surface-container":"#0a1a0e","on-error":"#690005","primary":"#a3e635","surface-container-highest":"#15331c","on-tertiary-container":"#dcfce7","on-secondary-fixed":"#002113","on-secondary-container":"#86efac","on-surface":"#e2fce6","on-tertiary-fixed":"#002109","secondary":"#22c55e","tertiary-fixed-dim":"#4ae176","accent-neon":"#a3e635","accent-lime":"#84cc16","accent-emerald":"#10b981"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.375rem","xl":"0.625rem","full":"9999px"},"spacing":{"gutter-desktop":"1.5rem","margin-desktop":"2.5rem","space-xl":"2.5rem","space-sm":"0.5rem","margin":"1rem","space-md":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","gutter":"1rem","gutter-tablet":"1.25rem","margin-tablet":"1.5rem"},"fontFamily":{"display-lg":["Space Grotesk","sans-serif"],"label-md":["JetBrains Mono","monospace"],"headline-lg":["Space Grotesk","sans-serif"],"label-sm":["JetBrains Mono","monospace"],"body-md":["Geist","sans-serif"],"headline-lg-mobile":["Space Grotesk","sans-serif"],"headline-md":["Space Grotesk","sans-serif"],"label-lg":["JetBrains Mono","monospace"],"body-lg":["Geist","sans-serif"],"display-lg-mobile":["Space Grotesk","sans-serif"],"metric-valuation":["Space Grotesk","sans-serif"],"headline-xl":["Space Grotesk","sans-serif"],"body-sm":["Geist","sans-serif"]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-black">
+<!-- FULL-SCREEN INTERACTIVE CANVAS & CYBER PARTICLES BACKGROUND -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="cyber-bg-container">
+<canvas class="absolute inset-0 w-full h-full block" id="matrixCanvas"></canvas>
+<!-- Interactive Dynamic Mouse Spotlight -->
+<div class="absolute w-[600px] h-[600px] rounded-full pointer-events-none transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 blur-[130px] opacity-40 mix-blend-screen" id="mouseGlowSpotlight" style="background: radial-gradient(circle, rgba(163,230,53,0.45) 0%, rgba(34,197,94,0.2) 40%, transparent 70%); left: 50%; top: 30%;"></div>
+<!-- Ambient Deep Corner Green Glows -->
+<div class="absolute -top-32 -left-20 w-[550px] h-[550px] bg-emerald-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute bottom-0 right-1/4 w-[650px] h-[650px] bg-lime-500/10 rounded-full blur-[160px] pointer-events-none"></div>
+</div>
+<aside class="fixed left-0 top-0 h-screen w-72 cyber-glass-deep flex flex-col z-50 shadow-[0_1px_16px_rgba(0,0,0,0.6)] border-r border-primary/20"><div class="p-3.5 border-b border-primary/15 flex items-center gap-3 bg-[#030904]/60 backdrop-blur-sm">
+  <div class="relative group shrink-0 cursor-pointer" onclick="document.querySelector('aside nav a[data-path=\'price-prediction-studio\']')?.click()">
+    <div class="absolute -inset-0.5 bg-gradient-to-r from-primary/60 via-lime-400/50 to-emerald-400/60 rounded-xl blur-sm opacity-70 group-hover:opacity-100 transition duration-300"></div>
+    <img src="static/logo.jpg" onerror="this.src='logo.jpg'" alt="CARPRICE AI Logo" class="relative w-11 h-11 rounded-xl object-cover border border-primary/40 shadow-[0_0_15px_rgba(163,230,53,0.35)] group-hover:scale-105 transition-transform" />
+  </div>
+  <div class="overflow-hidden min-w-0 cursor-pointer" onclick="document.querySelector('aside nav a[data-path=\'price-prediction-studio\']')?.click()">
+    <div class="font-headline-md text-base font-extrabold text-white tracking-tight flex items-center gap-1.5 leading-tight">
+      <span class="text-primary font-bold tracking-tight">CARPRICE</span>
+      <span class="text-white text-[10px] px-1.5 py-0.5 rounded bg-primary/20 text-primary border border-primary/30 font-mono font-bold">AI</span>
+    </div>
+    <div class="font-mono text-[9px] text-primary/80 uppercase tracking-widest font-semibold truncate flex items-center gap-1 mt-0.5">
+      <span>Indian Valuation Engine</span>
+    </div>
+  </div>
+</div><div class="px-space-md py-space-xs"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm py-space-xs">Navigation</div></div><nav class="flex-1 px-space-md space-y-space-xs">
+  <a class="nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg transition-all duration-150 bg-primary/20 text-primary font-semibold border border-primary/50 shadow-[0_0_20px_rgba(163,230,53,0.25)] cursor-pointer" data-path="price-prediction-studio" href="#">
+    <span class="material-symbols-outlined text-[20px] text-primary">insights</span>
+    <span class="font-bold">Valuation Studio</span>
+  </a>
+  <a class="nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all duration-150 border border-transparent hover:border-primary/20 cursor-pointer" data-path="bulk-csv" href="#">
+    <span class="material-symbols-outlined text-[20px]">upload_file</span>
+    <span>Bulk CSV Valuation</span>
+  </a>
+  <a class="nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all duration-150 border border-transparent hover:border-primary/20 cursor-pointer" data-path="market-analytics" href="#">
+    <span class="material-symbols-outlined text-[20px]">query_stats</span>
+    <span>Market Analytics</span>
+  </a>
+  <a class="nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all duration-150 border border-transparent hover:border-primary/20 cursor-pointer" data-path="model-performance" href="#">
+    <span class="material-symbols-outlined text-[20px]">speed</span>
+    <span>Model Performance</span>
+  </a>
+  <a class="nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all duration-150 border border-transparent hover:border-primary/20 cursor-pointer" data-path="project-info" href="#">
+    <span class="material-symbols-outlined text-[20px]">info</span>
+    <span>Project Info</span>
+  </a>
+</nav><div class="p-space-md"><div class="rounded-xl cyber-glass p-space-md shadow-[0_4px_16px_rgba(0,0,0,0.4)] space-y-space-xs border border-primary/30"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a3e635]"></span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">Engine Live</span></div><span class="font-label-sm text-label-sm text-primary/70 bg-primary/10 px-1.5 py-0.5 rounded border border-primary/20">v4.2</span></div><div class="font-label-md text-label-md text-on-surface font-semibold">Linear Regression</div><div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant"><span class="">Model R²</span><span class="text-primary font-bold">99.46%</span></div><div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant"><span class="">Dataset Pool</span><span class="text-on-surface font-medium">10,000 Records</span></div><div class="pt-space-xs"><div class="w-full h-1.5 bg-black/60 rounded-full overflow-hidden border border-primary/20"><div class="h-full bg-gradient-to-r from-emerald-500 to-primary rounded-full w-[99.46%] shadow-[0_0_8px_#a3e635]"></div></div></div></div></div></aside><div class="pl-72 relative z-10"><main class="relative w-full pt-6 bg-transparent px-space-lg pb-space-xl"><div class="flex flex-col w-full">
+<!-- ========================================================================= -->
+<div id="tab-studio" class="tab-pane flex flex-col w-full">
+<!-- HERO INTERACTIVE VORTEX / COSMIC TELEMETRY BANNER (MATCHING IMAGE_5)      -->
+<!-- ========================================================================= -->
+<section class="relative w-full rounded-2xl cyber-glass border border-primary/35 shadow-[0_8px_32px_rgba(0,0,0,0.65)] overflow-hidden mb-space-lg group">
+<!-- Interactive Cosmic Particle Wormhole / Funnel Canvas -->
+<div class="relative w-full h-[280px] sm:h-[320px] lg:h-[350px] overflow-hidden bg-[#030904]">
+<canvas class="absolute inset-0 w-full h-full block cursor-crosshair z-0" id="vortex-canvas"></canvas>
+<!-- Cybernetic Telemetry Grid & Ambient Radial Underlay -->
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_70%_65%,rgba(163,230,53,0.22)_0%,rgba(16,185,129,0.08)_40%,transparent_75%)]"></div>
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-emerald-400 opacity-80 shadow-[0_0_15px_#a3e635]"></div>
+<!-- Telemetry Overlay Content -->
+<div class="absolute inset-0 z-10 flex flex-col justify-between p-space-md md:p-space-lg pointer-events-none">
+<!-- Top Overlay Bar: Title, Pipeline status & Audio Waveform -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm pointer-events-auto">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Workspace</span>
+<span class="text-primary/60 text-xs">›</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Valuation Studio (₹ INR / India)</span>
+</div>
+<h1 class="font-headline-xl text-2xl sm:text-3xl lg:text-4xl text-white font-bold tracking-tight">
+            Vehicle Market <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Valuation Studio</span>
+</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl mt-1 leading-snug">
+            Enter vehicle specifications, mechanical upkeep, and physical condition to calculate an instant fair market valuation in Indian Rupees (₹ INR).
+          </p>
+</div>
+<!-- Telemetry Pipeline + Live Audio Waveform Visualizer -->
+<div class="flex flex-col items-end gap-2 shrink-0">
+<div class="flex items-center gap-2">
+<div class="px-space-sm py-1 rounded bg-[#07170a]/90 border border-primary/40 text-on-surface text-[11px] font-mono shadow-[0_0_12px_rgba(163,230,53,0.15)] flex items-center gap-1.5">
+<span class="text-outline uppercase text-[10px] font-bold">MODEL PIPELINE:</span>
+<span class="text-primary font-semibold">Leakage-Free 80:20 Pipeline Active</span>
+</div>
+</div>
+<!-- Audio wave / frequency waveform visualizer directly matching Image 5 top-right -->
+<div class="flex items-center gap-3 bg-[#061408]/80 border border-primary/30 px-3 py-1.5 rounded-lg shadow-sm">
+<span class="font-mono text-[10px] text-primary/70 uppercase tracking-widest">200%</span>
+<svg class="h-6 w-32 stroke-primary fill-none text-primary" preserveaspectratio="none" viewbox="0 0 140 24">
+<path class="vortex-pulse" d="M0,12 L15,12 L20,8 L25,16 L30,4 L35,20 L40,12 L55,12 L60,2 L65,22 L70,5 L75,19 L80,12 L95,12 L100,7 L105,17 L110,3 L115,21 L120,12 L140,12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+</svg>
+<!-- Engine Accuracy Glowing Badge -->
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-primary/20 border border-primary/50 text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+<span class="material-symbols-outlined text-[15px] font-bold">verified</span>
+<div class="text-[10px] font-mono font-bold leading-tight uppercase">
+<span class="text-white/80">Engine Accuracy</span><br/>
+<span class="text-primary">99.46% R² Valuation</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Dynamic Telemetry Floating Coordinate Tag -->
+<div class="hidden md:flex items-center justify-between pointer-events-none opacity-60 font-mono text-[10px] text-primary/60">
+<span class="tracking-widest">LOC: 061.220 / LATENCY: 4.8ms</span>
+<span class="tracking-widest animate-pulse flex items-center gap-1 text-primary">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+          KINETIC TELEMETRY FIELD ACTIVE [CLICK ANYWHERE FOR SHOCKWAVE PULSE]
+        </span>
+<span class="tracking-widest">DENSITY: 250</span>
+</div>
+<!-- Bottom Interactive Control Chips & Quick Presets Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs pointer-events-auto border-t border-primary/20 bg-gradient-to-t from-[#020703]/90 via-[#020703]/60 to-transparent p-2 rounded-xl backdrop-blur-sm">
+<div class="flex flex-wrap items-center gap-2">
+<!-- Regression Badge -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/15 border border-primary/40 text-primary font-mono text-xs font-semibold shadow-[0_0_10px_rgba(163,230,53,0.2)]">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>LINEAR REGRESSION - 99.46% R² • 10K RECORDS</span>
+</div>
+<span class="text-primary/40 text-xs hidden sm:inline">•</span>
+<span class="font-mono text-xs text-outline uppercase tracking-wider">QUICK PRESETS:</span>
+<!-- Preset Buttons with exact vehicle archetypes from IMAGE_5 -->
+<div class="flex items-center gap-1.5">
+<button class="preset-btn px-2.5 py-1 rounded-full bg-[#0d2212] border border-primary/30 hover:border-primary hover:bg-primary/20 text-on-surface hover:text-primary font-mono text-xs transition-all flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer" data-preset="swift" type="button">
+<span>🚗</span> Maruti Swift (Hatchback)
+            </button>
+<button class="preset-btn px-2.5 py-1 rounded-full bg-[#0d2212] border border-primary/30 hover:border-primary hover:bg-primary/20 text-on-surface hover:text-primary font-mono text-xs transition-all flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer" data-preset="fortuner" type="button">
+<span>🚙</span> Toyota Fortuner (SUV)
+            </button>
+<button class="preset-btn px-2.5 py-1 rounded-full bg-[#0d2212] border border-primary/30 hover:border-primary hover:bg-primary/20 text-on-surface hover:text-primary font-mono text-xs transition-all flex items-center gap-1 shadow-sm active:scale-95 cursor-pointer" data-preset="mg" type="button">
+<span>⚡</span> MG ZS EV (Electric)
+            </button>
+</div>
+</div>
+<div class="flex items-center gap-2 font-mono text-xs text-primary/80">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-primary/10 border border-primary/25">
+<span class="material-symbols-outlined text-[14px] text-primary">speed</span>
+<span>Inference Latency: &lt; 5ms</span>
+</div>
+<span class="text-outline text-xs hidden lg:inline">Refreshed: Real-Time Stream</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- END HERO INTERACTIVE VORTEX / COSMIC TELEMETRY BANNER                     -->
+<!-- ========================================================================= -->
+<!-- Main Two-Column Desktop Workspace -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg pb-space-xl items-start">
+<!-- LEFT COLUMN: Input Control Station (7 Cols on XL) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- CARD 1: Vehicle Technical Specifications -->
+<div class="rounded-xl cyber-glass p-space-lg shadow-lg space-y-space-md relative overflow-hidden border border-primary/30">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_10px_rgba(163,230,53,0.3)]">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Vehicle Technical Specifications</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider px-space-sm py-0.5 rounded bg-primary/10 border border-primary/30">Specs Phase 1</span>
+</div>
+<!-- Specs Form Grid -->
+<div class="space-y-space-md pt-space-xs">
+<!-- Row: Manufacturer & Model -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<label class="block font-label-lg text-label-lg text-on-surface" for="manufacturer">Manufacturer / Brand</label>
+<div class="relative">
+<select style="background-image: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important;" class="w-full bg-[#09170c] border border-primary/30 text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer shadow-sm transition-all pr-10" id="manufacturer">
+  <option class="bg-[#040804] text-white" value="Honda">Honda</option>
+  <option class="bg-[#040804] text-white" value="Hyundai">Hyundai</option>
+  <option class="bg-[#040804] text-white" value="Kia" selected="">Kia</option>
+  <option class="bg-[#040804] text-white" value="MG">MG</option>
+  <option class="bg-[#040804] text-white" value="Mahindra">Mahindra</option>
+  <option class="bg-[#040804] text-white" value="Maruti Suzuki">Maruti Suzuki</option>
+  <option class="bg-[#040804] text-white" value="Skoda">Skoda</option>
+  <option class="bg-[#040804] text-white" value="Tata">Tata</option>
+  <option class="bg-[#040804] text-white" value="Toyota">Toyota</option>
+  <option class="bg-[#040804] text-white" value="Volkswagen">Volkswagen</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 pointer-events-none text-primary/70 text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<label class="block font-label-lg text-label-lg text-on-surface" for="modelSelect">Model Designation</label>
+<div class="relative">
+<select style="background-image: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important;" class="w-full bg-[#09170c] border border-primary/30 text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer shadow-sm transition-all pr-10" id="modelSelect">
+  <option class="bg-[#040804] text-white" value="Carens">Carens</option>
+  <option class="bg-[#040804] text-white" value="Seltos" selected="">Seltos</option>
+  <option class="bg-[#040804] text-white" value="Sonet">Sonet</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 pointer-events-none text-primary/70 text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Manufacturing Year Range Slider -->
+<div class="space-y-space-xs p-space-md rounded-lg bg-[#09170c]/90 border border-primary/20 shadow-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="yearSlider">Manufacturing Year</label>
+<span class="px-space-md py-0.5 rounded-full bg-primary text-black font-label-sm text-label-sm font-bold shadow-[0_0_12px_rgba(163,230,53,0.5)]" id="yearDisplay">2022</span>
+</div>
+<input class="w-full h-2 rounded-lg cursor-pointer" id="yearSlider" max="2026" min="2006" type="range" value="2022"/>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span class="">2006</span>
+<span class="">2011</span>
+<span class="">2016</span>
+<span class="">2021</span>
+<span class="">2026</span>
+</div>
+</div>
+<!-- Row: Fuel Efficiency & Engine Capacity -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="mileageInput">Fuel Efficiency</label>
+<span class="font-label-sm text-label-sm text-primary/70 font-mono">ARAI Test</span>
+</div>
+<div class="relative">
+<input class="w-full bg-[#09170c] border border-primary/30 text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm transition-all" id="mileageInput" type="text" value="16.5 km/l"/>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-primary/70 text-[18px]">local_gas_station</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="engineInput">Engine Displacement (CC)</label>
+<span class="font-label-sm text-label-sm text-primary font-mono">0 CC for Electric</span>
+</div>
+<div class="relative">
+<input class="w-full bg-[#09170c] border border-primary/30 text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary shadow-sm transition-all" id="engineInput" type="text" value="1497 CC"/>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 text-primary/70 text-[18px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Fuel Type Segmented Selector -->
+<div class="space-y-space-xs">
+<span class="block font-label-lg text-label-lg text-on-surface">Powertrain / Fuel Archetype</span>
+<div class="grid grid-cols-4 gap-space-xs p-1 bg-[#09170c] border border-primary/30 rounded-lg" id="fuelTypes">
+<button class="fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all bg-primary text-black font-bold shadow-[0_0_15px_rgba(163,230,53,0.4)]" data-val="Petrol" type="button">Petrol</button>
+<button class="fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container-high" data-val="Diesel" type="button">Diesel</button>
+<button class="fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container-high" data-val="CNG" type="button">CNG</button>
+<button class="fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container-high" data-val="Electric" type="button">Electric</button>
+</div>
+</div>
+<!-- Transmission Segmented Selector -->
+<div class="space-y-space-xs">
+<span class="block font-label-lg text-label-lg text-on-surface">Transmission Configuration</span>
+<div class="grid grid-cols-2 gap-space-sm" id="transmissionTypes">
+<button class="trans-btn py-space-sm px-space-md rounded-lg font-label-lg text-label-lg text-center transition-all bg-[#09170c] border border-primary/20 text-on-surface-variant hover:text-primary hover:border-primary/50 shadow-sm" data-trans="manual" type="button">
+                  Manual Drive
+                </button>
+<button class="trans-btn py-space-sm px-space-md rounded-lg font-label-lg text-label-lg text-center transition-all bg-primary text-black font-bold shadow-[0_0_20px_rgba(163,230,53,0.45)] border border-primary" data-trans="automatic" type="button">
+                  Automatic (DCT / IVT)
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: Condition & Ownership History -->
+<div class="rounded-xl cyber-glass p-space-lg shadow-lg space-y-space-md border border-primary/30">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_10px_rgba(163,230,53,0.3)]">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Condition &amp; Ownership History</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider px-space-sm py-0.5 rounded bg-primary/10 border border-primary/30">Specs Phase 2</span>
+</div>
+<div class="space-y-space-md pt-space-xs">
+<!-- Exterior Swatch Picker -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface">Exterior Paint Finishes</label>
+<span class="font-label-sm text-label-sm text-primary font-semibold font-mono" id="selectedColorName">Alpine White</span>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs flex-wrap">
+<!-- Color 1 (Selected) -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#f8fafc] ring-2 ring-primary ring-offset-2 ring-offset-[#071209] transition-transform hover:scale-110 shadow-sm" data-color="White" title="Alpine White" type="button">
+<span class="material-symbols-outlined text-[#030704] text-[18px] absolute inset-0 m-auto flex items-center justify-center font-bold">check</span>
+</button>
+<!-- Color 2 -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#94a3b8] transition-transform hover:scale-110 shadow-sm" data-color="Silver" title="Metallic Silver" type="button"></button>
+<!-- Color 3 -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#1e293b] transition-transform hover:scale-110 shadow-sm" data-color="Black" title="Obsidian Black" type="button"></button>
+<!-- Color 4 -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#1d4ed8] transition-transform hover:scale-110 shadow-sm" data-color="Blue" title="Cobalt Blue" type="button"></button>
+<!-- Color 5 -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#991b1b] transition-transform hover:scale-110 shadow-sm" data-color="Red" title="Crimson Red" type="button"></button>
+<!-- Color 6 -->
+<button class="color-swatch relative w-9 h-9 rounded-full bg-[#334155] transition-transform hover:scale-110 shadow-sm" data-color="Grey" title="Charcoal Grey" type="button"></button>
+</div>
+</div>
+<!-- Previous Owners Slider -->
+<div class="space-y-space-xs p-space-md rounded-lg bg-[#09170c]/90 border border-primary/20 shadow-sm">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="ownersSlider">Previous Registered Owners</label>
+<span class="px-space-md py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-primary font-label-sm text-label-sm font-semibold shadow-[0_0_10px_rgba(163,230,53,0.3)]" id="ownersDisplay">1 Owner (Prime Equity)</span>
+</div>
+<input class="w-full h-2 rounded-lg cursor-pointer" id="ownersSlider" max="5" min="1" type="range" value="1"/>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span class="">1 (Single)</span>
+<span class="">2</span>
+<span class="">3</span>
+<span class="">4</span>
+<span class="">5+</span>
+</div>
+</div>
+<!-- Service History Log Dropdown -->
+<div class="space-y-space-xs">
+<label class="block font-label-lg text-label-lg text-on-surface" for="serviceHistory">Service Maintenance History Log</label>
+<div class="relative">
+<select style="background-image: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important;" class="w-full bg-[#09170c] border border-primary/30 text-on-surface px-space-md py-space-sm rounded-lg font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary cursor-pointer shadow-sm transition-all pr-10" id="serviceHistory">
+<option class="bg-[#040804] text-white" selected="" value="Authorized Dealer">Authorized Dealer (OEM Certified Logbook)</option>
+<option class="bg-[#040804] text-white" value="Independent Garage">Independent Garage (Third-Party Garage)</option>
+<option class="bg-[#040804] text-white" value="Partial">Partial History (Mixed Maintenance)</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 pointer-events-none text-primary/70 text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Accident Stepper & Insurance Toggle Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Stepper: Reported Accidents -->
+<div class="p-space-md rounded-lg bg-[#09170c] border border-primary/20 shadow-sm flex flex-col justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Reported Accident Claims</span>
+<div class="flex items-center justify-between mt-space-sm">
+<button aria-label="Decrease Accidents" class="w-9 h-9 rounded-lg bg-surface-container-high border border-primary/20 hover:border-primary/60 hover:bg-primary/20 flex items-center justify-center text-on-surface hover:text-primary transition-all active:scale-90" id="decAccident" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold text-primary font-mono" id="accidentCount">0</span>
+<button aria-label="Increase Accidents" class="w-9 h-9 rounded-lg bg-surface-container-high border border-primary/20 hover:border-primary/60 hover:bg-primary/20 flex items-center justify-center text-on-surface hover:text-primary transition-all active:scale-90" id="incAccident" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Switch: Comprehensive Insurance -->
+<div class="p-space-md rounded-lg bg-[#09170c] border border-primary/20 shadow-sm flex items-center justify-between">
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Comprehensive Insurance</div>
+<div class="font-body-sm text-body-sm text-outline">Active bumper-to-bumper</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="insuranceToggle" type="checkbox"/>
+<div class="w-11 h-6 bg-[#16291a] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-black after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-black after:border-primary after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary shadow-[0_0_14px_rgba(163,230,53,0.4)] border border-primary/30"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Action CTA (High Voltage Neon Lime) -->
+<div class="space-y-space-xs">
+<button class="w-full py-space-md px-space-lg rounded-xl bg-gradient-to-r from-lime-500 via-[#a3e635] to-emerald-400 text-black font-headline-md text-headline-md font-black transition-all transform hover:-translate-y-0.5 active:translate-y-0 lime-box-glow hover:lime-box-glow-lg flex items-center justify-center gap-space-sm group cursor-pointer border border-lime-300" id="calcValuationBtn" type="button">
+<span class="material-symbols-outlined text-[24px] text-black group-hover:rotate-12 transition-transform font-bold">auto_awesome</span>
+<span class="tracking-wide">Predict Estimated Selling Price</span>
+</button>
+<div class="flex items-center justify-center gap-space-xs text-outline font-body-sm text-body-sm text-center">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span class="">Calibrated with real-time North American &amp; Indian auction feeds (10,000+ empirical data vectors)</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Real-Time Algorithmic Valuation & Analytics (5 Cols on XL) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg sticky top-20">
+<!-- CARD 1: Hero Valuation Glassmorphism Card -->
+<div class="rounded-xl cyber-glass p-space-lg shadow-2xl relative overflow-hidden space-y-space-md border border-primary/40">
+<!-- Top Accent Light-Bar (Neon Lime & Emerald) -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-primary to-lime-300 shadow-[0_0_12px_#a3e635]"></div>
+<!-- Header & Confidence Pill -->
+<div class="flex items-center justify-between flex-wrap gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a3e635]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Algorithmic Valuation Output</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-primary/20 border border-primary/40 text-primary font-label-sm text-label-sm font-semibold shadow-[0_0_12px_rgba(163,230,53,0.25)]">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span class="">High Confidence (99.5%)</span>
+</div>
+</div>
+<!-- Hero Price Display with Animated Counter Look -->
+<div class="pt-space-xs space-y-space-xs">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Estimated Fair Market Valuation</div>
+<div class="font-metric-valuation text-metric-valuation tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-lime-400 neon-lime-glow flex items-baseline gap-2 flex-wrap" id="valuationOutputPrice">
+  <span id="priceLakhDisplay">₹ 16.46 Lakh</span> <span class="text-xl font-mono text-primary/80 font-normal" id="valuationOutputInrSub">(₹ 16,45,896 INR)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs" id="confidenceIntervalDisplay">
+<span class="material-symbols-outlined text-primary/70 text-[16px]">price_change</span>
+<span id="ciText">Expected Range: ₹ 15.90 Lakh – ₹ 17.01 Lakh (± ₹ 55,579 RMSE)</span>
+</div>
+</div>
+<!-- Spec Summary Chips Matrix -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="p-space-xs px-space-sm rounded-lg bg-[#09170c] border border-primary/20 flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">directions_car</span>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-outline">Target Spec</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold truncate" id="chipSpec">2020 Kia Seltos</div>
+</div>
+</div>
+<div class="p-space-xs px-space-sm rounded-lg bg-[#09170c] border border-primary/20 flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">memory</span>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-outline">Powertrain</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold truncate" id="chipPower">1497 CC Petrol</div>
+</div>
+</div>
+<div class="p-space-xs px-space-sm rounded-lg bg-[#09170c] border border-primary/20 flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">person_check</span>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-outline">Ownership</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold truncate" id="chipOwner">1 Owner</div>
+</div>
+</div>
+<div class="p-space-xs px-space-sm rounded-lg bg-[#09170c] border border-primary/20 flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-lime-400 text-[18px]">verified</span>
+<div class="truncate">
+<div class="font-label-sm text-label-sm text-outline">Service Log</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold truncate" id="chipService">Authorized OEM</div>
+</div>
+</div>
+</div>
+<!-- Maintenance Equity Insight Callout -->
+<div class="p-space-md rounded-lg bg-emerald-950/40 border border-primary/30 flex items-start gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">insights</span>
+<div class="space-y-0.5">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Maintenance Equity Insight</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Full Authorized Dealer history preserves <span class="text-primary font-bold">+12% resale equity</span> relative to standard market curve deprecation in this segment.
+              </p>
+</div>
+</div>
+<!-- Depreciation Velocity Progress Section -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface-variant">Depreciation Velocity Index</span>
+<span class="text-primary font-bold font-mono">-4.2% / year (Top 10% resilient)</span>
+</div>
+<!-- Glow Gradient Progress Gauge -->
+<div class="w-full h-2.5 rounded-full bg-[#09170c] overflow-hidden p-0.5 border border-primary/30">
+<div class="h-full rounded-full bg-gradient-to-r from-emerald-500 via-primary to-lime-300 w-[88%] shadow-[0_0_12px_rgba(163,230,53,0.7)]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="">High Value Retention</span>
+<span class="">Fast Deprecator</span>
+</div>
+</div>
+<!-- Functional Bulk Valuation Action Bar -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+  <button id="btnOpenBulkCsv" class="py-space-sm px-space-md rounded-lg bg-primary hover:bg-lime-400 text-black font-label-lg text-label-lg font-bold transition-all flex items-center justify-center gap-space-xs shadow-[0_0_15px_rgba(163,230,53,0.35)] active:scale-95 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">upload_file</span>
+    <span>Bulk CSV Valuation</span>
+  </button>
+  <button id="btnDownloadSampleCsv" class="py-space-sm px-space-md rounded-lg bg-[#09170c] border border-primary/30 hover:border-primary hover:bg-primary/20 text-on-surface hover:text-primary font-label-lg text-label-lg transition-all flex items-center justify-center gap-space-xs shadow-sm active:scale-95 cursor-pointer" type="button">
+    <span class="material-symbols-outlined text-[18px]">download</span>
+    <span>Download Sample CSV</span>
+  </button>
+</div>
+</div>
+<!-- CARD 2: Market Price Distribution & Depreciation Curve -->
+<div class="rounded-xl cyber-glass p-space-lg shadow-lg space-y-space-md border border-primary/30">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Market Price Distribution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Benchmarked against 840 recent cohort transactions</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">analytics</span>
+</div>
+<!-- Visual Distribution Histogram & Curve SVG Chart -->
+<div class="pt-space-xs space-y-space-sm">
+<div class="h-32 w-full flex items-end justify-between gap-1.5 px-space-xs pt-space-md bg-[#09170c] border border-primary/20 rounded-lg relative overflow-hidden shadow-sm">
+<!-- Overlay Indicator for This Vehicle -->
+<div class="absolute top-2 right-1/4 flex flex-col items-center z-10">
+<span class="px-space-xs py-0.5 rounded bg-primary text-black font-label-sm text-label-sm font-bold shadow-[0_0_10px_rgba(163,230,53,0.6)]">This Vehicle</span>
+<div class="w-0.5 h-16 bg-primary mt-1 border-dashed shadow-[0_0_6px_#a3e635]"></div>
+</div>
+<!-- Bar 1 -->
+<div class="w-full bg-[#132c18]/70 hover:bg-primary/50 rounded-t h-[20%] transition-all"></div>
+<!-- Bar 2 -->
+<div class="w-full bg-[#132c18]/90 hover:bg-primary/60 rounded-t h-[35%] transition-all"></div>
+<!-- Bar 3 -->
+<div class="w-full bg-[#18391f] hover:bg-primary/70 rounded-t h-[52%] transition-all"></div>
+<!-- Bar 4 (Median Peak) -->
+<div class="w-full bg-emerald-600/80 hover:bg-primary rounded-t h-[82%] transition-all shadow-[0_0_10px_rgba(34,197,94,0.4)]"></div>
+<!-- Bar 5 (Cohort Segment - Highlighted neon) -->
+<div class="w-full bg-primary rounded-t h-[94%] shadow-[0_0_18px_rgba(163,230,53,0.7)]"></div>
+<!-- Bar 6 -->
+<div class="w-full bg-emerald-600/60 hover:bg-primary rounded-t h-[60%] transition-all"></div>
+<!-- Bar 7 -->
+<div class="w-full bg-[#18391f]/80 hover:bg-primary/60 rounded-t h-[30%] transition-all"></div>
+<!-- Bar 8 -->
+<div class="w-full bg-[#132c18]/50 hover:bg-primary/50 rounded-t h-[12%] transition-all"></div>
+</div>
+<!-- Tier Comparison Triple Metrics -->
+<div class="grid grid-cols-3 gap-space-xs text-center pt-space-xs">
+<div class="p-space-xs rounded-lg bg-[#09170c] border border-primary/20 shadow-sm">
+<div class="font-label-sm text-label-sm text-outline">Low Tier Median</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5 font-mono" id="cohortLowPrice">₹ 13.52 Lakh</div>
+</div>
+<div class="p-space-xs rounded-lg bg-[#09170c] border border-primary/20 shadow-sm">
+<div class="font-label-sm text-label-sm text-outline">Market Median</div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5 font-mono" id="cohortMedianPrice">₹ 16.20 Lakh</div>
+</div>
+<div class="p-space-xs rounded-lg bg-primary/15 border border-primary/50 shadow-[0_0_14px_rgba(163,230,53,0.2)]">
+<div class="font-label-sm text-label-sm text-primary font-bold">This Vehicle</div>
+<div class="font-label-lg text-label-lg text-primary font-bold mt-0.5 font-mono neon-lime-glow" id="cohortHighPrice">₹ 18.25 Lakh</div>
+</div>
+</div>
+</div>
+<!-- Need Fleet Valuation? Batch Upload CSV Callout Banner -->
+<div class="p-space-md rounded-xl bg-[#09170c] border border-primary/30 flex items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shrink-0 shadow-[0_0_10px_rgba(163,230,53,0.3)]">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface font-semibold">Need Fleet Valuation?</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Batch appraise up to 25,000 VINs via CSV</div>
+</div>
+</div>
+<button class="shrink-0 px-space-md py-space-xs rounded-lg bg-primary/20 border border-primary/40 text-primary hover:bg-primary hover:text-black font-label-md text-label-md font-bold shadow-sm hover:shadow-[0_0_15px_rgba(163,230,53,0.4)] transition-all cursor-pointer" type="button">
+              Bulk Mode
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- ========================================================================= -->
+<!-- TAB: BULK CSV FLEET VALUATION (#tab-bulk) -->
+<!-- ========================================================================= -->
+<div id="tab-bulk" class="tab-pane hidden flex-col w-full space-y-space-lg">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Fleet Telemetry</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">Bulk Automated Evaluation</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Bulk CSV <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Fleet Valuation Studio</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Upload automobile inventory files in CSV format to compute instant algorithmic valuations for each vehicle in Indian Rupees (₹ INR).
+    </p>
+  </div>
+
+  <!-- Upload & Action Station Card -->
+  <div class="rounded-xl cyber-glass p-space-lg border border-primary/30 space-y-space-md">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+      <!-- Upload Drop Zone (Col 2) -->
+      <div class="md:col-span-2 border-2 border-dashed border-primary/40 hover:border-primary rounded-xl p-space-lg bg-[#07170a]/60 flex flex-col items-center justify-center text-center cursor-pointer transition-colors relative group" id="bulkDropZone">
+        <input type="file" id="bulkCsvFileInput" accept=".csv" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full"/>
+        <div class="w-12 h-12 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-2 shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+          <span class="material-symbols-outlined text-[28px]">cloud_upload</span>
+        </div>
+        <div class="font-bold text-white text-base">Click to Upload or Drag &amp; Drop CSV File</div>
+        <div class="text-xs text-on-surface-variant mt-1">Supports standard CSV with brand, model, make_year, mileage_kmpl, engine_cc, etc.</div>
+      </div>
+
+      <!-- Quick Template & Actions (Col 1) -->
+      <div class="flex flex-col gap-space-sm p-space-md rounded-xl bg-[#09170c] border border-primary/20">
+        <div class="font-bold text-white text-sm flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-primary text-[18px]">description</span>
+          <span>Sample Template</span>
+        </div>
+        <p class="text-xs text-on-surface-variant">Download our pre-populated template with 5 ready-to-test vehicles (Swift, Fortuner, Creta, Thar, Seltos).</p>
+        <button id="btnDownloadSampleCsvTemplate" class="w-full py-2.5 px-3 rounded-lg bg-primary hover:bg-lime-400 text-black font-bold text-xs transition-all flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(163,230,53,0.3)] cursor-pointer">
+          <span class="material-symbols-outlined text-[16px]">download</span>
+          <span>Download Sample CSV</span>
+        </button>
+        <button id="btnLoadDemoFleet" class="w-full py-2 px-3 rounded-lg bg-[#0d2212] border border-primary/30 hover:border-primary text-primary font-semibold text-xs transition-all flex items-center justify-center gap-1.5 cursor-pointer">
+          <span class="material-symbols-outlined text-[16px]">play_circle</span>
+          <span>Load Demo 5-Car Fleet</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bulk Results Section (hidden by default until CSV loaded) -->
+  <div id="bulkResultsContainer" class="hidden space-y-space-md">
+    <!-- Fleet KPI Stat Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+      <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+        <div class="text-xs font-mono text-outline uppercase">Vehicles Evaluated</div>
+        <div class="text-3xl font-mono font-extrabold text-primary neon-lime-glow" id="bulkTotalVehicles">0</div>
+        <div class="text-[11px] text-on-surface-variant">Validated CSV Rows</div>
+      </div>
+      <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+        <div class="text-xs font-mono text-outline uppercase">Total Fleet Valuation</div>
+        <div class="text-3xl font-mono font-extrabold text-white" id="bulkTotalValuation">₹ 0.00 Lakh</div>
+        <div class="text-[11px] text-primary" id="bulkTotalValuationInr">₹ 0 INR</div>
+      </div>
+      <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+        <div class="text-xs font-mono text-outline uppercase">Average Value Per Car</div>
+        <div class="text-3xl font-mono font-extrabold text-white" id="bulkAvgValuation">₹ 0.00 Lakh</div>
+        <div class="text-[11px] text-on-surface-variant">Calculated OLS Mean</div>
+      </div>
+    </div>
+
+    <!-- Export Action Bar -->
+    <div class="flex items-center justify-between flex-wrap gap-2">
+      <div class="text-sm text-on-surface font-semibold flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        <span id="bulkStatusText">Valuation Complete: 5 vehicles processed in 2.1 ms</span>
+      </div>
+      <button id="btnExportValuedCsv" class="py-2 px-4 rounded-lg bg-primary hover:bg-lime-400 text-black font-bold text-xs transition-all flex items-center gap-1.5 shadow-[0_0_12px_rgba(163,230,53,0.3)] cursor-pointer">
+        <span class="material-symbols-outlined text-[16px]">file_download</span>
+        <span>Export Evaluated CSV with Valuations</span>
+      </button>
+    </div>
+
+    <!-- Results Table Card -->
+    <div class="rounded-xl cyber-glass border border-primary/30 overflow-hidden shadow-lg">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left font-body-sm text-xs">
+          <thead class="bg-[#07170a] border-b border-primary/20 text-outline uppercase font-mono">
+            <tr>
+              <th class="py-3 px-3">#</th>
+              <th class="py-3 px-3">Vehicle Spec</th>
+              <th class="py-3 px-3">Year</th>
+              <th class="py-3 px-3">Powertrain / Fuel</th>
+              <th class="py-3 px-3">Mileage / Engine</th>
+              <th class="py-3 px-3">Owners</th>
+              <th class="py-3 px-3 text-right">Predicted Valuation (₹ Lakh)</th>
+              <th class="py-3 px-3 text-right">Amount (₹ INR)</th>
+            </tr>
+          </thead>
+          <tbody id="bulkResultsTableBody" class="divide-y divide-primary/10 font-mono">
+            <!-- Dynamically populated rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================================= -->
+<!-- TAB: MARKET ANALYTICS (14 Exploratory Visualizations) -->
+<!-- ========================================================================= -->
+<div id="tab-analytics" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Exploratory Telemetry</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">10,000 Verified Market Records</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Market Analytics &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Exploratory Insights</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Comprehensive analytical charts generated across the 10,000 automobile dataset, uncovering price depreciation curves, brand equity indices, and powertrain correlations.
+    </p>
+  </div>
+
+  <!-- KPI Top Metric Cards -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+    <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+      <div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Records</div>
+      <div class="font-headline-xl text-2xl md:text-3xl text-primary font-extrabold neon-lime-glow">10,000</div>
+      <div class="text-[11px] text-on-surface-variant">Cleaned &amp; Validated Instances</div>
+    </div>
+    <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+      <div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Avg Selling Price</div>
+      <div class="font-headline-xl text-2xl md:text-3xl text-white font-extrabold">₹ 14.28 Lakh</div>
+      <div class="text-[11px] text-primary/80">Median: ₹ 13.65 Lakh</div>
+    </div>
+    <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+      <div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Year Span</div>
+      <div class="font-headline-xl text-2xl md:text-3xl text-primary font-extrabold">2006 – 2026</div>
+      <div class="text-[11px] text-on-surface-variant">20-Year Automobile Spectrum</div>
+    </div>
+    <div class="p-space-md rounded-xl cyber-glass border border-primary/30 space-y-1">
+      <div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Top Value Retainer</div>
+      <div class="font-headline-xl text-2xl md:text-3xl text-white font-extrabold">Toyota</div>
+      <div class="text-[11px] text-primary font-bold">+14.2% Brand Equity</div>
+    </div>
+  </div>
+
+  <!-- Charts Grid (6 Core Visualizations) -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">01. Used Car Price Distribution (₹ INR)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Seaborn KDE</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/01_price_distribution.png" alt="Price Distribution" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Normal right-skewed pricing distribution spanning ₹ 2.5 Lakh to ₹ 48 Lakh with peak clustering at ₹ 12–16 Lakh.</p>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">02. Selling Price vs. Vehicle Age</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Scatter + Lowess</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/02_price_vs_car_age.png" alt="Price vs Age" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Strongest negative predictor (-0.89 correlation). Steady nonlinear depreciation observed across the 2006–2026 span.</p>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">03. Selling Price vs. Fuel Efficiency (km/l)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Hexbin Density</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/03_price_vs_mileage.png" alt="Price vs Mileage" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Vehicles with 16–22 km/l maintain the highest transaction liquidity and market stability.</p>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">04. Engine Capacity (CC) vs. Valuation</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Regression Fit</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/04_price_vs_engine_cc.png" alt="Price vs Engine CC" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Strong positive relationship with displacement; high-capacity engines (>2000 CC) demonstrate premium retention.</p>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">05. Price Distribution Across 10 Brands</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Boxen Plot</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/05_price_by_brand.png" alt="Price by Brand" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Toyota and MG command higher median valuation tiers, while Maruti Suzuki dominates volume with high residual consistency.</p>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">08. Feature Correlation Matrix</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Heatmap</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/08_correlation_heatmap.png" alt="Correlation Matrix" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+      <p class="text-xs text-on-surface-variant">Multi-collinearity checked: Car Age and Engine CC are dominant drivers, while Owner Count exhibits moderate depreciation effect.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================================= -->
+<!-- TAB: MODEL PERFORMANCE & BENCHMARKS -->
+<!-- ========================================================================= -->
+<div id="tab-performance" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Empirical Validation</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">2,000 Independent Test Records</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Machine Learning <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Model Benchmarks</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Rigorous benchmarking of 4 supervised regression architectures evaluated on held-out test data (random_state=42) with strict zero-data-leakage pipeline.
+    </p>
+  </div>
+
+  <!-- Champion Model Banner -->
+  <div class="p-space-lg rounded-xl cyber-glass border border-primary/50 relative overflow-hidden shadow-[0_0_25px_rgba(163,230,53,0.15)]">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-primary to-lime-300"></div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+          <span class="text-xs font-mono font-bold text-primary uppercase tracking-widest">DEPLOYED PRODUCTION CHAMPION</span>
+        </div>
+        <h2 class="text-2xl font-bold text-white mt-1">Linear Regression (Optimized OLS Pipeline)</h2>
+        <p class="text-sm text-on-surface-variant mt-1">
+          Achieved superior test accuracy with near-instant client inference (0.4ms) and zero data leakage.
+        </p>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="text-right">
+          <div class="text-xs text-outline uppercase font-mono">Test R² Score</div>
+          <div class="text-3xl font-mono font-extrabold text-primary neon-lime-glow">0.9946</div>
+        </div>
+        <div class="text-right border-l border-primary/30 pl-4">
+          <div class="text-xs text-outline uppercase font-mono">Test RMSE</div>
+          <div class="text-3xl font-mono font-bold text-white">₹ 55,579</div>
+          <div class="text-[11px] text-primary/80">Optimal Calibration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benchmarking Comparison Table -->
+  <div class="rounded-xl cyber-glass border border-primary/30 overflow-hidden shadow-lg">
+    <div class="p-space-md border-b border-primary/20 flex items-center justify-between">
+      <h3 class="font-headline-md text-body-md font-bold text-white">4 Supervised Algorithms Benchmark Summary</h3>
+      <span class="text-xs font-mono text-primary">N = 2,000 Test Rows</span>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left font-body-sm text-body-sm">
+        <thead class="bg-[#07170a] border-b border-primary/20 text-xs font-mono text-outline uppercase">
+          <tr>
+            <th class="py-3 px-4">Algorithm</th>
+            <th class="py-3 px-4">Test R²</th>
+            <th class="py-3 px-4">RMSE (₹ INR)</th>
+            <th class="py-3 px-4">MAE (₹ INR)</th>
+            <th class="py-3 px-4">Inference Latency</th>
+            <th class="py-3 px-4 text-right">Production Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-primary/10">
+          <tr class="bg-primary/10 font-medium">
+            <td class="py-3 px-4 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="text-white font-bold">Linear Regression (Champion)</span>
+            </td>
+            <td class="py-3 px-4 font-mono text-primary font-bold">0.9946</td>
+            <td class="py-3 px-4 font-mono text-white">₹ 55,579</td>
+            <td class="py-3 px-4 font-mono text-white">₹ 38,909</td>
+            <td class="py-3 px-4 font-mono text-primary">0.4 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-primary text-black font-bold text-xs">Active Engine</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">Random Forest Regressor (n=100)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9934</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 61,438</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 42,120</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">18.2 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">XGBoost Regressor (Extreme Gradient Boosting)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9934</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 61,480</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 42,390</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">7.8 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">Gradient Boosting Regressor (sklearn)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9917</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 68,950</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 47,810</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">9.4 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Performance Plots -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">Actual vs. Predicted Valuations (R² = 0.9946)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Diagonal OLS</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/11_actual_vs_predicted_prices.png" alt="Actual vs Predicted" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">Model Comparison Metrics (R², RMSE, MAE)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Bar Chart</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/13_model_comparison_metrics.png" alt="Model Comparison Metrics" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================================= -->
+<!-- TAB: PROJECT INFO & ARCHITECTURE -->
+<!-- ========================================================================= -->
+<div id="tab-info" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">System Blueprint</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">Technical Architecture</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Project Architecture &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Telemetry Specifications</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Full technical documentation of the CARPRICE AI system: data engineering pipeline, zero-leakage training workflow, Indian Rupee calibration, and dual-mode inference.
+    </p>
+  </div>
+
+  <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 flex flex-col sm:flex-row items-center gap-6 mb-6 shadow-[0_0_20px_rgba(163,230,53,0.15)]">
+      <div class="relative group shrink-0">
+        <div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-500/50 rounded-2xl blur-md opacity-75"></div>
+        <img src="static/logo.jpg" onerror="this.src='logo.jpg'" alt="CARPRICE AI Official Emblem" class="relative w-28 h-28 rounded-2xl object-cover border-2 border-primary/50 shadow-[0_0_25px_rgba(163,230,53,0.4)]" />
+      </div>
+      <div class="space-y-1 text-left">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/40 text-primary font-mono text-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Indian Valuation Engine — Official Emblem
+        </div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">CARPRICE AI <span class="text-primary font-mono text-base">(Indian Valuation Engine)</span></h2>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          Autonomous bio-synthetic kinetic valuation platform engineered for India's automobile market across 10 top OEMs, 43 passenger models, 2006–2026 manufacturing spectrum, and leakage-free algorithmic regression inference.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">database</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">10,000 Verified Records</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Empirical dataset spanning 10 brands, 43 models, and manufacturing years 2006 to 2026. Features include mileage, engine capacity, ownership counts, service logs, and accident claim history.
+      </p>
+    </div>
+
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">security</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">Leakage-Free 80:20 Split</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        StandardScaler and OneHotEncoder were fitted exclusively on 8,000 training cars before transforming the 2,000 test cars, preventing feature leakage and optimistic bias.
+      </p>
+    </div>
+
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">currency_rupee</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">Indian Rupee (₹ INR) Engine</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Dynamic conversion into Indian Lakhs (₹ 18.25 Lakh) and full INR amounts (₹ 18,24,475), calibrated with confidence intervals derived from the model's test RMSE (± ₹ 55,579).
+      </p>
+    </div>
+  </div>
+</div>
+
+</main></div>
+<script>
+  // =========================================================================
+  // 1. DEDICATED HERO COSMIC PARTICLE VORTEX / WORMHOLE CANVAS (IMAGE_5 REPLICA)
+  // WITH MULTI-CLICK KINETIC EXPANDING SHOCKWAVE PULSE & TELEMETRY SPARKS
+  // =========================================================================
+  (function initVortexHeroCanvas() {
+    const canvas = document.getElementById('vortex-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width = 0;
+    let height = 0;
+
+    function resize() {
+      const rect = canvas.getBoundingClientRect();
+      const w = Math.round(rect.width || canvas.offsetWidth || 1200);
+      const h = Math.round(rect.height || canvas.offsetHeight || 350);
+      if (w > 0 && h > 0) {
+        width = canvas.width = w;
+        height = canvas.height = h;
+      }
+    }
+    window.addEventListener('resize', resize);
+    resize();
+    if (window.ResizeObserver) {
+      new ResizeObserver(() => resize()).observe(canvas.parentElement || canvas);
+    }
+
+    // Vortex center & Interactive mouse states
+    let vortexCenter = {
+      x: width * 0.68,
+      y: height * 0.62,
+      targetX: width * 0.68,
+      targetY: height * 0.62
+    };
+
+    let mouse = {
+      x: width * 0.68,
+      y: height * 0.62,
+      isHovering: false,
+      pulse: 0
+    };
+
+    const container = canvas.parentElement;
+
+    function updateMousePos(e) {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      mouse.isHovering = true;
+      mouse.pulse = 1.0;
+    }
+
+    if (container) {
+      container.addEventListener('mousemove', updateMousePos);
+      container.addEventListener('mouseleave', () => {
+        mouse.isHovering = false;
+        vortexCenter.targetX = width * 0.68;
+        vortexCenter.targetY = height * 0.62;
+      });
+      container.addEventListener('pointerdown', (e) => {
+        // Prevent interfering with interactive preset buttons or links if clicked
+        if (e.target.closest('button') || e.target.closest('a') || e.target.closest('input')) return;
+        const rect = canvas.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const clickY = e.clientY - rect.top;
+        triggerShockwavePulse(clickX, clickY);
+      });
+    }
+
+    // Shockwave pulse collection and telemetry spark ripples
+    const shockwaves = [];
+    const shockSparks = [];
+
+    function triggerShockwavePulse(x, y) {
+      // 1. Primary shockwave pulse object
+      shockwaves.push({
+        x: x,
+        y: y,
+        radius: 6,
+        maxRadius: Math.max(width, height) * 0.75,
+        speed: 9.5,
+        thickness: 4.5,
+        alpha: 1.0,
+        decay: 0.016,
+        hue: Math.random() > 0.3 ? '#ccff80' : '#4edea3',
+        secondaryHue: '#a3e635'
+      });
+
+      // 2. High-energy burst of glowing telemetry sparks traveling outwards
+      const sparkCount = 38;
+      for (let i = 0; i < sparkCount; i++) {
+        const angle = (Math.PI * 2 * i) / sparkCount + (Math.random() - 0.5) * 0.35;
+        const speed = 3.5 + Math.random() * 7.5;
+        shockSparks.push({
+          x: x,
+          y: y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * (speed * 0.65), // perspective squash matching 3D vortex plane
+          size: Math.random() * 2.8 + 1.2,
+          alpha: 1.0,
+          decay: 0.02 + Math.random() * 0.025,
+          color: Math.random() > 0.4 ? '#ccff80' : (Math.random() > 0.5 ? '#6ffbbe' : '#bdffc2')
+        });
+      }
+    }
+
+    // Generate Cosmic Vortex Particles (Concentric rings & Spiraling Funnel)
+    const PARTICLE_COUNT = 380;
+    const particles = [];
+
+    class VortexParticle {
+      constructor() {
+        this.reset(true);
+        this.dispX = 0;
+        this.dispY = 0;
+      }
+
+      reset(initRandom = false) {
+        this.angle = Math.random() * Math.PI * 2;
+        this.dist = initRandom ? Math.random() * (Math.max(width, height) * 0.75) : (Math.max(width, height) * 0.6 + Math.random() * 80);
+        this.zDepth = Math.random();
+        this.baseSpeed = 0.006 + (1 - this.zDepth) * 0.015;
+        this.size = Math.random() * 2.2 + 0.8;
+        this.radialSpeed = (0.4 + (1 - this.zDepth) * 1.8);
+        this.alpha = 0.2 + Math.random() * 0.8;
+        this.colorTone = Math.random() > 0.25 ? '#a3e635' : (Math.random() > 0.5 ? '#4ade80' : '#dcfce7');
+      }
+
+      update() {
+        this.angle += this.baseSpeed;
+        this.dist -= this.radialSpeed;
+
+        if (this.dist < 8) {
+          this.reset(false);
+          this.dist = Math.max(width, height) * 0.65;
+        }
+
+        const currentCenterX = vortexCenter.x;
+        const currentCenterY = vortexCenter.y;
+        const tilt = 0.42;
+
+        let px = currentCenterX + Math.cos(this.angle) * this.dist;
+        let py = currentCenterY + Math.sin(this.angle) * (this.dist * tilt);
+
+        if (this.dist < 120) {
+          py += (120 - this.dist) * 0.5;
+        }
+
+        // Mouse hover deflection
+        if (mouse.isHovering) {
+          const mdx = mouse.x - px;
+          const mdy = mouse.y - py;
+          const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+          if (mDist < 140) {
+            const force = (140 - mDist) / 140;
+            px -= (mdx / mDist) * force * 24;
+            py -= (mdy / mDist) * force * 24;
+            this.angle += force * 0.08;
+          }
+        }
+
+        // Kinetic Shockwave Radial Displacement (push particles outwards dynamically with damped spring back)
+        this.dispX *= 0.88;
+        this.dispY *= 0.88;
+
+        for (let s of shockwaves) {
+          const dx = (px + this.dispX) - s.x;
+          const dy = (py + this.dispY) - s.y;
+          const distToShock = Math.hypot(dx, dy);
+          const waveDiff = Math.abs(distToShock - s.radius);
+
+          // If particle lies near expanding wavefront, apply sudden outward displacement impulse
+          if (waveDiff < 32 && distToShock > 0.001) {
+            const pushFactor = (1 - waveDiff / 32) * s.alpha * 14;
+            const nx = dx / distToShock;
+            const ny = dy / distToShock;
+            this.dispX += nx * pushFactor;
+            this.dispY += ny * pushFactor;
+          }
+        }
+
+        this.currentX = px + this.dispX;
+        this.currentY = py + this.dispY;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.currentX, this.currentY, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.colorTone;
+        ctx.globalAlpha = Math.min(1.0, this.alpha);
+        ctx.shadowColor = '#a3e635';
+        ctx.shadowBlur = this.size > 1.8 ? 10 : 4;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+    }
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push(new VortexParticle());
+    }
+
+    // Animation Loop
+    function renderVortex() {
+      if (mouse.isHovering) {
+        vortexCenter.targetX = width * 0.68 + (mouse.x - width * 0.68) * 0.18;
+        vortexCenter.targetY = height * 0.62 + (mouse.y - height * 0.62) * 0.18;
+      }
+      vortexCenter.x += (vortexCenter.targetX - vortexCenter.x) * 0.08;
+      vortexCenter.y += (vortexCenter.targetY - vortexCenter.y) * 0.08;
+
+      // Always reset shadowBlur and globalAlpha to prevent shadow accumulation
+      ctx.shadowBlur = 0;
+      ctx.shadowColor = 'transparent';
+      ctx.globalAlpha = 1.0;
+      ctx.setLineDash([]);
+      ctx.clearRect(0, 0, width, height);
+
+      // Solid obsidian black base ensures background is never solid lime green
+      ctx.fillStyle = '#030904';
+      ctx.fillRect(0, 0, width, height);
+
+      // Deep glowing dark green backdrop
+      const safeRadius = Math.max(10, width * 0.7);
+      const bgGrad = ctx.createRadialGradient(
+        vortexCenter.x, vortexCenter.y, 5,
+        vortexCenter.x, vortexCenter.y, safeRadius
+      );
+      bgGrad.addColorStop(0, 'rgba(163, 230, 53, 0.28)');
+      bgGrad.addColorStop(0.25, 'rgba(34, 197, 94, 0.12)');
+      bgGrad.addColorStop(0.7, 'rgba(5, 18, 9, 0.6)');
+      bgGrad.addColorStop(1, 'rgba(2, 6, 3, 0.95)');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, width, height);
+
+      // Perspective Elliptical Vortex Orbit Grid Rings
+      const ringCount = 9;
+      ctx.save();
+      for (let r = 1; r <= ringCount; r++) {
+        const radiusX = (r / ringCount) * (width * 0.58);
+        const radiusY = radiusX * 0.38;
+        const ringAlpha = 0.08 + (1 - r / ringCount) * 0.22;
+
+        ctx.beginPath();
+        ctx.ellipse(vortexCenter.x, vortexCenter.y + (r < 4 ? (4 - r) * 6 : 0), radiusX, radiusY, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(163, 230, 53, ${ringAlpha})`;
+        ctx.lineWidth = r === 2 ? 1.8 : 0.9;
+        if (r % 2 === 0) {
+          ctx.setLineDash([4, 8]);
+        } else {
+          ctx.setLineDash([]);
+        }
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      // Funnel Core Throat Pillar / Vertical Light Rays
+      const coreGrad = ctx.createLinearGradient(vortexCenter.x, vortexCenter.y - 80, vortexCenter.x, vortexCenter.y + 120);
+      coreGrad.addColorStop(0, 'rgba(163, 230, 53, 0)');
+      coreGrad.addColorStop(0.4, 'rgba(163, 230, 53, 0.55)');
+      coreGrad.addColorStop(0.6, 'rgba(255, 255, 255, 0.85)');
+      coreGrad.addColorStop(0.8, 'rgba(74, 222, 128, 0.35)');
+      coreGrad.addColorStop(1, 'rgba(163, 230, 53, 0)');
+
+      ctx.save();
+      ctx.fillStyle = coreGrad;
+      ctx.beginPath();
+      ctx.moveTo(vortexCenter.x - 22, vortexCenter.y - 60);
+      ctx.lineTo(vortexCenter.x + 22, vortexCenter.y - 60);
+      ctx.lineTo(vortexCenter.x + 8, vortexCenter.y + 90);
+      ctx.lineTo(vortexCenter.x - 8, vortexCenter.y + 90);
+      ctx.closePath();
+      ctx.shadowColor = '#a3e635';
+      ctx.shadowBlur = 25;
+      ctx.fill();
+      ctx.restore();
+
+      // -------------------------------------------------------------
+      // RENDER ACTIVE SHOCKWAVE PULSES (CONCURRENT MULTI-CLICK PULSES)
+      // -------------------------------------------------------------
+      for (let sIdx = shockwaves.length - 1; sIdx >= 0; sIdx--) {
+        const sw = shockwaves[sIdx];
+        sw.radius += sw.speed;
+        sw.alpha -= sw.decay;
+
+        if (sw.alpha <= 0 || sw.radius >= sw.maxRadius) {
+          shockwaves.splice(sIdx, 1);
+          continue;
+        }
+
+        ctx.save();
+        // Inner shockwave glowing halo
+        ctx.beginPath();
+        ctx.arc(sw.x, sw.y, sw.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = sw.hue;
+        ctx.lineWidth = Math.max(1, sw.thickness * sw.alpha);
+        ctx.globalAlpha = sw.alpha * 0.9;
+        ctx.shadowColor = '#a3e635';
+        ctx.shadowBlur = 24 * sw.alpha;
+        ctx.stroke();
+
+        // Secondary tight sharp high-voltage neon edge
+        ctx.beginPath();
+        ctx.arc(sw.x, sw.y, Math.max(0, sw.radius - 3), 0, Math.PI * 2);
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.2;
+        ctx.globalAlpha = sw.alpha * 0.7;
+        ctx.stroke();
+
+        // Diffuse outer pulse aura
+        ctx.beginPath();
+        ctx.arc(sw.x, sw.y, sw.radius + 8, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(74, 222, 128, 0.4)';
+        ctx.lineWidth = 2.5;
+        ctx.globalAlpha = sw.alpha * 0.35;
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // -------------------------------------------------------------
+      // RENDER TELEMETRY SPARKS FROM CLICK PULSES
+      // -------------------------------------------------------------
+      for (let spIdx = shockSparks.length - 1; spIdx >= 0; spIdx--) {
+        const sp = shockSparks[spIdx];
+        sp.x += sp.vx;
+        sp.y += sp.vy;
+        sp.vx *= 0.96;
+        sp.vy *= 0.96;
+        sp.alpha -= sp.decay;
+
+        if (sp.alpha <= 0) {
+          shockSparks.splice(spIdx, 1);
+          continue;
+        }
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(sp.x, sp.y, sp.size * sp.alpha, 0, Math.PI * 2);
+        ctx.fillStyle = sp.color;
+        ctx.globalAlpha = sp.alpha;
+        ctx.shadowColor = '#a3e635';
+        ctx.shadowBlur = 10;
+        ctx.fill();
+        ctx.restore();
+      }
+
+      // Update & Draw Particles with inter-particle web filaments
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        p.update();
+        p.draw();
+
+        if (i % 3 === 0) {
+          const nextP = particles[(i + 1) % particles.length];
+          const dist = Math.hypot(p.currentX - nextP.currentX, p.currentY - nextP.currentY);
+          if (dist < 42) {
+            ctx.beginPath();
+            ctx.moveTo(p.currentX, p.currentY);
+            ctx.lineTo(nextP.currentX, nextP.currentY);
+            ctx.strokeStyle = `rgba(163, 230, 53, ${0.28 * (1 - dist / 42)})`;
+            ctx.lineWidth = 0.7;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Interactive tracking crosshair & magnetic ring
+      if (mouse.isHovering) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, 18, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(163, 230, 53, 0.8)';
+        ctx.lineWidth = 1.2;
+        ctx.setLineDash([2, 3]);
+        ctx.shadowColor = '#a3e635';
+        ctx.shadowBlur = 8;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = '#a3e635';
+        ctx.fill();
+        ctx.restore();
+      }
+
+      ctx.globalAlpha = 1.0;
+      requestAnimationFrame(renderVortex);
+    }
+    renderVortex();
+  })();
+
+  // =========================================================================
+  // 2. BACKGROUND AMBIENT PARTICLES
+  // =========================================================================
+  (function initCyberBackground() {
+    const canvas = document.getElementById('matrixCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const spotlight = document.getElementById('mouseGlowSpotlight');
+
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    let mouse = {
+      x: width * 0.55,
+      y: height * 0.35,
+      targetX: width * 0.55,
+      targetY: height * 0.35,
+      radius: 170,
+      active: true
+    };
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      initNodes();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.targetX = e.clientX;
+      mouse.targetY = e.clientY;
+      mouse.active = true;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.active = false;
+    });
+
+    const nodes = [];
+    const sparks = [];
+
+    function initNodes() {
+      nodes.length = 0;
+      sparks.length = 0;
+      const count = Math.min(80, Math.max(35, Math.floor((width * height) / 18000)));
+
+      for (let i = 0; i < count; i++) {
+        nodes.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          size: Math.random() * 2 + 1.2,
+          pulse: Math.random() * Math.PI,
+          pulseSpeed: 0.02 + Math.random() * 0.03
+        });
+      }
+
+      for (let i = 0; i < 30; i++) {
+        sparks.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: -0.2 - Math.random() * 0.4,
+          size: Math.random() * 1.6 + 0.5,
+          alpha: 0.2 + Math.random() * 0.5,
+          color: Math.random() > 0.4 ? '#a3e635' : '#4ade80'
+        });
+      }
+    }
+    initNodes();
+
+    function render() {
+      mouse.x += (mouse.targetX - mouse.x) * 0.12;
+      mouse.y += (mouse.targetY - mouse.y) * 0.12;
+
+      if (spotlight) {
+        spotlight.style.left = mouse.x + 'px';
+        spotlight.style.top = mouse.y + 'px';
+      }
+
+      ctx.fillStyle = '#030704';
+      ctx.fillRect(0, 0, width, height);
+
+      // Grid lines
+      ctx.strokeStyle = 'rgba(21, 51, 28, 0.16)';
+      ctx.lineWidth = 1;
+      const gridSize = 64;
+      ctx.beginPath();
+      for (let x = 0; x < width; x += gridSize) {
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, height);
+      }
+      for (let y = 0; y < height; y += gridSize) {
+        ctx.moveTo(0, y);
+        ctx.lineTo(width, y);
+      }
+      ctx.stroke();
+
+      // Sparks
+      for (let s of sparks) {
+        s.x += s.vx;
+        s.y += s.vy;
+        if (s.y < -10) { s.y = height + 10; s.x = Math.random() * width; }
+        if (s.x < -10) s.x = width + 10;
+        if (s.x > width + 10) s.x = -10;
+
+        ctx.fillStyle = s.color;
+        ctx.globalAlpha = s.alpha * 0.6;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1.0;
+
+      // Particles
+      for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i];
+        node.x += node.vx;
+        node.y += node.vy;
+        node.pulse += node.pulseSpeed;
+
+        if (node.x < 0 || node.x > width) node.vx *= -1;
+        if (node.y < 0 || node.y > height) node.vy *= -1;
+
+        const dx = mouse.x - node.x;
+        const dy = mouse.y - node.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < mouse.radius && mouse.active) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          node.x -= (dx / dist) * force * 2.5;
+          node.y -= (dy / dist) * force * 2.5;
+
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(163, 230, 53, ${0.4 * force})`;
+          ctx.lineWidth = 1 * force;
+          ctx.moveTo(node.x, node.y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.stroke();
+        }
+
+        const currentSize = node.size + Math.sin(node.pulse) * 0.7;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, Math.max(0.5, currentSize), 0, Math.PI * 2);
+        ctx.fillStyle = '#a3e635';
+        ctx.shadowColor = '#a3e635';
+        ctx.shadowBlur = 6;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      requestAnimationFrame(render);
+    }
+    render();
+  })();
+
+  // =========================================================================
+  
+  // =========================================================================
+  // 3. INTERACTIVE UI FORM LOGIC, TAB NAVIGATION, ML & BULK CSV VALUATION
+  // =========================================================================
+  const BRAND_MODELS = {"Maruti Suzuki": ["Alto K10", "Baleno", "Brezza", "Dzire", "Ertiga", "Swift", "Wagon R"], "Hyundai": ["Alcazar", "Creta", "Grand i10 Nios", "Venue", "Verna", "i20"], "Tata": ["Altroz", "Harrier", "Nexon", "Punch", "Safari", "Tiago"], "Mahindra": ["Bolero", "Scorpio-N", "Thar", "XUV300", "XUV700"], "Toyota": ["Fortuner", "Glanza", "Innova Crysta", "Urban Cruiser Hyryder"], "Kia": ["Carens", "Seltos", "Sonet"], "Honda": ["Amaze", "City", "Elevate"], "Volkswagen": ["Polo", "Taigun", "Virtus"], "Skoda": ["Kushaq", "Octavia", "Slavia"], "MG": ["Astor", "Hector", "ZS EV"]};
+  const ML_WEIGHTS = {"intercept": 13921.902020597345, "coef": [1338.3354215385566, 1.8277224374655816, 680.1363920404528, -673.8844944943285, -678.7782751278432, -1338.335421538521, -42.77307279901834, -1792.9902501449742, -2050.193627537574, -1226.8346494607722, 2805.4015192050147, 940.1055427988676, -6661.17772572971, 3737.3885756409595, -2219.37259734288, 7912.554489197255, -1444.8812766261776, 7793.507947159513, -4378.897504158356, -5663.148416696093, -5445.471452586507, -5023.808320980042, -688.1153767243686, -6694.137088530868, 2242.148197215166, 486.20184400300604, 2109.5335364552666, 2814.6348350502776, -1008.5713891151263, 1542.9476659862685, 1946.1493332654554, 24801.669165787378, -15163.278481079085, -6822.5454267101795, 7951.792439240022, 414.0923864814372, 3882.148108430096, -2942.599878852052, -1811.568971479552, 9920.890838208492, -5709.945854750307, -6263.696409799033, 10938.136260186384, 4317.888838972187, 1798.7776862011733, -3240.9023837155028, -3511.814179664963, -1417.8506664569811, 2232.252252505194, 1325.0529806375343, -7370.887498794589, -5607.9843039411235, -3211.417139899086, 2033.4559579316838, 2032.812325618943, -3356.040319755499, -5331.567790354882, 7322.868602074934, 7415.117453703632, -4657.829801069821, -40.26623151206968, -78.60720996205896, 166.77737203918332, -47.90393056507037, 432.32919828066315, -432.32919828066406, -13.844464388065717, -69.79982163202646, 32.174074747799295, 27.043801841745903, 11.923172461036756, 12.503236969506247, 746.4314679116255, -196.1605606435578, -736.4671249286689, 186.19621766059936, -344.90841411360316, 344.9084141136027], "num_cols": ["make_year", "mileage_kmpl", "engine_cc", "owner_count", "accidents_reported", "car_age", "accident_status"], "scaler_mean": [2018.0165, 19.050487500000003, 1440.963375, 1.553375, 0.264875, 7.9835, 0.207], "scaler_scale": [3.7704081675595815, 4.609092618112999, 440.1389675813872, 0.7763060668157888, 0.5735557813979386, 3.770408167559581, 0.4051555256935292], "cat_features": ["brand_Honda", "brand_Hyundai", "brand_Kia", "brand_MG", "brand_Mahindra", "brand_Maruti Suzuki", "brand_Skoda", "brand_Tata", "brand_Toyota", "brand_Volkswagen", "model_Alcazar", "model_Alto K10", "model_Altroz", "model_Amaze", "model_Astor", "model_Baleno", "model_Bolero", "model_Brezza", "model_Carens", "model_City", "model_Creta", "model_Dzire", "model_Elevate", "model_Ertiga", "model_Fortuner", "model_Glanza", "model_Grand i10 Nios", "model_Harrier", "model_Hector", "model_Innova Crysta", "model_Kushaq", "model_Nexon", "model_Octavia", "model_Polo", "model_Punch", "model_Safari", "model_Scorpio-N", "model_Seltos", "model_Slavia", "model_Sonet", "model_Swift", "model_Taigun", "model_Thar", "model_Tiago", "model_Urban Cruiser Hyryder", "model_Venue", "model_Verna", "model_Virtus", "model_Wagon R", "model_XUV300", "model_XUV700", "model_ZS EV", "model_i20", "fuel_type_CNG", "fuel_type_Diesel", "fuel_type_Electric", "fuel_type_Petrol", "transmission_Automatic", "transmission_Manual", "color_Black", "color_Blue", "color_Grey", "color_Red", "color_Silver", "color_White", "service_history_Authorized Dealer", "service_history_Independent Garage", "service_history_None", "service_history_Partial", "insurance_valid_No", "insurance_valid_Yes"]};
+  const USD_TO_INR = 83.5;
+
+  let currentBulkEvaluatedCars = [];
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // -----------------------------------------------------------------------
+    // A. TAB NAVIGATION (Valuation Studio, Bulk CSV, Analytics, Performance, Info)
+    // -----------------------------------------------------------------------
+    const navLinks = document.querySelectorAll('aside nav a.nav-item, [data-switch]');
+    const tabPanes = {
+      'overview': 'tab-studio',
+      'price-prediction-studio': 'tab-studio',
+      'bulk-csv': 'tab-bulk',
+      'market-analytics': 'tab-analytics',
+      'model-performance': 'tab-performance',
+      'project-info': 'tab-info'
+    };
+
+    function switchTab(path) {
+      const targetTabId = tabPanes[path] || 'tab-studio';
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.add('hidden'));
+      const activeTab = document.getElementById(targetTabId);
+      if (activeTab) {
+        activeTab.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Trigger canvas resize so vortex is crystal sharp
+        window.dispatchEvent(new Event('resize'));
+      }
+
+      document.querySelectorAll('aside nav a.nav-item').forEach(link => {
+        if (link.dataset.path === path || (path === 'overview' && link.dataset.path === 'price-prediction-studio')) {
+          link.className = 'nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all duration-150 bg-primary/20 text-primary font-semibold border border-primary/50 shadow-[0_0_20px_rgba(163,230,53,0.25)] cursor-pointer';
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = 'material-symbols-outlined text-[20px] text-primary';
+          const span = link.querySelector('span:not(.material-symbols-outlined)');
+          if (span) span.className = 'font-bold';
+        } else {
+          link.className = 'nav-item flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-all duration-150 border border-transparent hover:border-primary/20 cursor-pointer';
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = 'material-symbols-outlined text-[20px]';
+          const span = link.querySelector('span:not(.material-symbols-outlined)');
+          if (span) span.className = '';
+        }
+      });
+    }
+
+    document.querySelectorAll('aside nav a.nav-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const path = link.dataset.path;
+        if (path) switchTab(path);
+      });
+    });
+
+    document.querySelectorAll('[data-switch]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const path = btn.dataset.switch;
+        if (path) switchTab(path);
+      });
+    });
+
+    const openBulkBtn = document.getElementById('btnOpenBulkCsv');
+    if (openBulkBtn) {
+      openBulkBtn.addEventListener('click', () => switchTab('bulk-csv'));
+    }
+
+    // -----------------------------------------------------------------------
+    // B. BRAND & MODEL SELECT LOGIC
+    // -----------------------------------------------------------------------
+    const mfgSelect = document.getElementById('manufacturer');
+    const modelSelect = document.getElementById('modelSelect');
+
+    function populateModels(brand, selectedModel = null) {
+      if (!modelSelect) return;
+      const models = BRAND_MODELS[brand] || [];
+      modelSelect.innerHTML = '';
+      models.forEach((m, idx) => {
+        const opt = document.createElement('option');
+        opt.className = 'bg-[#040804] text-white';
+        opt.value = m;
+        opt.textContent = m;
+        if (selectedModel ? m === selectedModel : idx === 0) {
+          opt.selected = true;
+        }
+        modelSelect.appendChild(opt);
+      });
+      updateSummaryChip();
+    }
+
+    if (mfgSelect) {
+      mfgSelect.addEventListener('change', (e) => {
+        populateModels(e.target.value);
+        triggerPrediction();
+      });
+    }
+
+    if (modelSelect) {
+      modelSelect.addEventListener('change', () => {
+        updateSummaryChip();
+        triggerPrediction();
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // C. YEAR SLIDER (2006 to 2026)
+    // -----------------------------------------------------------------------
+    const yearSlider = document.getElementById('yearSlider');
+    const yearDisplay = document.getElementById('yearDisplay');
+
+    if (yearSlider && yearDisplay) {
+      yearSlider.addEventListener('input', (e) => {
+        yearDisplay.textContent = e.target.value;
+        updateSummaryChip();
+        triggerPrediction();
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // D. OWNERS SLIDER
+    // -----------------------------------------------------------------------
+    const ownersSlider = document.getElementById('ownersSlider');
+    const ownersDisplay = document.getElementById('ownersDisplay');
+    const chipOwner = document.getElementById('chipOwner');
+
+    if (ownersSlider && ownersDisplay) {
+      ownersSlider.addEventListener('input', (e) => {
+        const val = e.target.value;
+        ownersDisplay.textContent = val == 1 ? '1 Owner (Prime Equity)' : `${val} Registered Owners`;
+        if (chipOwner) chipOwner.textContent = `${val} Owner${val > 1 ? 's' : ''}`;
+        triggerPrediction();
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // E. FUEL BUTTONS
+    // -----------------------------------------------------------------------
+    const fuelBtns = document.querySelectorAll('.fuel-btn');
+    const chipPower = document.getElementById('chipPower');
+    const engineInput = document.getElementById('engineInput');
+    let selectedFuel = 'Petrol';
+
+    fuelBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        fuelBtns.forEach(b => {
+          b.className = 'fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all text-on-surface-variant hover:text-primary hover:bg-surface-container-high';
+        });
+        btn.className = 'fuel-btn py-space-xs px-space-sm rounded-md font-label-md text-label-md text-center transition-all bg-primary text-black font-bold shadow-[0_0_15px_rgba(163,230,53,0.4)]';
+        selectedFuel = btn.dataset.val || btn.textContent.trim();
+        
+        if (selectedFuel === 'Electric') {
+          if (engineInput) engineInput.value = '0 CC (EV Motor)';
+        } else if (engineInput && engineInput.value.includes('0 CC')) {
+          engineInput.value = '1497 CC';
+        }
+        if (chipPower) {
+          chipPower.textContent = `${engineInput ? engineInput.value.replace(' CC', '').trim() : '1497'} CC ${selectedFuel}`;
+        }
+        triggerPrediction();
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // F. TRANSMISSION BUTTONS
+    // -----------------------------------------------------------------------
+    const transBtns = document.querySelectorAll('.trans-btn');
+    let selectedTrans = 'Automatic';
+
+    transBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        transBtns.forEach(b => {
+          b.className = 'trans-btn py-space-sm px-space-md rounded-lg font-label-lg text-label-lg text-center transition-all bg-[#09170c] border border-primary/20 text-on-surface-variant hover:text-primary hover:border-primary/50 shadow-sm';
+        });
+        btn.className = 'trans-btn py-space-sm px-space-md rounded-lg font-label-lg text-label-lg text-center transition-all bg-primary text-black font-bold shadow-[0_0_20px_rgba(163,230,53,0.45)] border border-primary';
+        selectedTrans = (btn.dataset.trans && btn.dataset.trans.toLowerCase() === 'manual') ? 'Manual' : 'Automatic';
+        triggerPrediction();
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // G. COLOR SWATCHES
+    // -----------------------------------------------------------------------
+    const swatches = document.querySelectorAll('.color-swatch');
+    const colorLabel = document.getElementById('selectedColorName');
+    let selectedColor = 'White';
+
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        swatches.forEach(s => {
+          s.classList.remove('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-[#071209]');
+          s.innerHTML = '';
+        });
+        swatch.classList.add('ring-2', 'ring-primary', 'ring-offset-2', 'ring-offset-[#071209]');
+        swatch.innerHTML = '<span class="material-symbols-outlined text-[#030704] text-[18px] absolute inset-0 m-auto flex items-center justify-center font-bold">check</span>';
+        selectedColor = swatch.dataset.color || 'White';
+        if (colorLabel) colorLabel.textContent = swatch.getAttribute('title') || selectedColor;
+        triggerPrediction();
+      });
+    });
+
+    // -----------------------------------------------------------------------
+    // H. ACCIDENT STEPPER & INSURANCE TOGGLE
+    // -----------------------------------------------------------------------
+    const decBtn = document.getElementById('decAccident');
+    const incBtn = document.getElementById('incAccident');
+    const accidentDisplay = document.getElementById('accidentCount');
+    let accidentCount = 0;
+
+    if (decBtn && incBtn && accidentDisplay) {
+      decBtn.addEventListener('click', () => {
+        if (accidentCount > 0) {
+          accidentCount--;
+          accidentDisplay.textContent = accidentCount;
+          triggerPrediction();
+        }
+      });
+      incBtn.addEventListener('click', () => {
+        accidentCount++;
+        accidentDisplay.textContent = accidentCount;
+        triggerPrediction();
+      });
+    }
+
+    const insuranceToggle = document.getElementById('insuranceToggle');
+    if (insuranceToggle) {
+      insuranceToggle.addEventListener('change', () => triggerPrediction());
+    }
+
+    const serviceSelect = document.getElementById('serviceHistory');
+    const chipService = document.getElementById('chipService');
+    if (serviceSelect) {
+      serviceSelect.addEventListener('change', () => {
+        if (chipService) chipService.textContent = serviceSelect.value;
+        triggerPrediction();
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // I. NUMERICAL INPUTS
+    // -----------------------------------------------------------------------
+    const mileageInput = document.getElementById('mileageInput');
+    if (mileageInput) {
+      mileageInput.addEventListener('change', () => triggerPrediction());
+    }
+    if (engineInput) {
+      engineInput.addEventListener('change', () => {
+        if (chipPower) {
+          chipPower.textContent = `${engineInput.value.replace(' CC', '').trim()} CC ${selectedFuel}`;
+        }
+        triggerPrediction();
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // J. PRESET BUTTONS
+    // -----------------------------------------------------------------------
+    const presets = document.querySelectorAll('.preset-btn');
+    presets.forEach(p => {
+      p.addEventListener('click', () => {
+        const type = p.dataset.preset;
+        if (type === 'swift') {
+          if (mfgSelect) mfgSelect.value = 'Maruti Suzuki';
+          populateModels('Maruti Suzuki', 'Swift');
+          if (yearSlider) yearSlider.value = 2021;
+          if (yearDisplay) yearDisplay.textContent = '2021';
+          if (engineInput) engineInput.value = '1197 CC';
+          if (mileageInput) mileageInput.value = '22.4 km/l';
+          selectFuel('Petrol');
+          selectTrans('Manual');
+        } else if (type === 'fortuner') {
+          if (mfgSelect) mfgSelect.value = 'Toyota';
+          populateModels('Toyota', 'Fortuner');
+          if (yearSlider) yearSlider.value = 2023;
+          if (yearDisplay) yearDisplay.textContent = '2023';
+          if (engineInput) engineInput.value = '2755 CC';
+          if (mileageInput) mileageInput.value = '14.2 km/l';
+          selectFuel('Diesel');
+          selectTrans('Automatic');
+        } else if (type === 'mg') {
+          if (mfgSelect) mfgSelect.value = 'MG';
+          populateModels('MG', 'ZS EV');
+          if (yearSlider) yearSlider.value = 2022;
+          if (yearDisplay) yearDisplay.textContent = '2022';
+          if (engineInput) engineInput.value = '0 CC (EV Motor)';
+          if (mileageInput) mileageInput.value = '18.0 km/l';
+          selectFuel('Electric');
+          selectTrans('Automatic');
+        }
+        triggerPrediction();
+      });
+    });
+
+    function selectFuel(fuelName) {
+      fuelBtns.forEach(btn => {
+        if (btn.dataset.val === fuelName || btn.textContent.trim() === fuelName) {
+          btn.click();
+        }
+      });
+    }
+
+    function selectTrans(transName) {
+      transBtns.forEach(btn => {
+        if (btn.textContent.toLowerCase().includes(transName.toLowerCase())) {
+          btn.click();
+        }
+      });
+    }
+
+    function updateSummaryChip() {
+      const chipSpec = document.getElementById('chipSpec');
+      if (!chipSpec) return;
+      const yr = yearSlider ? yearSlider.value : '2022';
+      const mfgText = mfgSelect ? mfgSelect.value : 'Kia';
+      const modelText = modelSelect ? modelSelect.value : 'Seltos';
+      chipSpec.textContent = `${yr} ${mfgText} ${modelText}`;
+    }
+
+    // -----------------------------------------------------------------------
+    // K. CLIENT-SIDE ML REGRESSION ENGINE
+    // -----------------------------------------------------------------------
+    function parseNumeric(val, defaultVal = 0) {
+      if (val === null || val === undefined) return defaultVal;
+      if (typeof val === 'number') return isNaN(val) ? defaultVal : val;
+      const str = String(val).trim();
+      const match = str.match(/[-+]?[0-9]*\.?[0-9]+/);
+      if (match) {
+        const parsed = parseFloat(match[0]);
+        return isNaN(parsed) ? defaultVal : parsed;
+      }
+      return defaultVal;
+    }
+
+    function calculateClientPrediction(car) {
+      const year = parseInt(car.make_year) || 2022;
+      const carAge = 2026 - year;
+      const mileage = parseNumeric(car.mileage_kmpl, 16.5);
+      const engine = parseNumeric(car.engine_cc, 1497);
+      const owners = parseInt(car.owner_count) || 1;
+      const accidents = parseInt(car.accidents_reported) || 0;
+      const accidentStatus = accidents > 0 ? 1 : 0;
+
+      const numVals = [year, mileage, engine, owners, accidents, carAge, accidentStatus];
+      const scaledNum = numVals.map((v, i) => (v - ML_WEIGHTS.scaler_mean[i]) / ML_WEIGHTS.scaler_scale[i]);
+
+      const activeCats = new Set([
+        `brand_${car.brand}`,
+        `model_${car.model}`,
+        `fuel_type_${car.fuel_type}`,
+        `transmission_${car.transmission}`,
+        `color_${car.color}`,
+        `service_history_${car.service_history}`,
+        `insurance_valid_${car.insurance_valid}`
+      ]);
+
+      const catVals = ML_WEIGHTS.cat_features.map(cat => activeCats.has(cat) ? 1.0 : 0.0);
+      const featVector = scaledNum.concat(catVals);
+
+      let predUsd = ML_WEIGHTS.intercept;
+      for (let i = 0; i < featVector.length; i++) {
+        predUsd += featVector[i] * ML_WEIGHTS.coef[i];
+      }
+      predUsd = Math.max(1500.0, predUsd);
+      const predInr = predUsd * USD_TO_INR;
+
+      return {
+        pred_usd: predUsd,
+        pred_inr: predInr,
+        formatted_lakh: (predInr / 100000).toFixed(2),
+        formatted_inr: Math.round(predInr).toLocaleString('en-IN')
+      };
+    }
+
+    function formatLakhs(val) {
+      const num = Number(val);
+      if (isNaN(num) || num <= 0) return '₹ 0.00 Lakh';
+      return `₹ ${(num / 100000).toFixed(2)} Lakh`;
+    }
+
+    function updateDisplays(predObj) {
+      if (!predObj) return;
+      const predInr = Number(predObj.pred_inr);
+      const predUsd = Number(predObj.pred_usd);
+      if (isNaN(predInr) || predInr <= 0) return;
+
+      const formattedLakh = predObj.formatted_lakh || (predInr / 100000).toFixed(2);
+      const formattedInr = predObj.formatted_inr || Math.round(predInr).toLocaleString('en-IN');
+
+      const priceLakhElem = document.getElementById('priceLakhDisplay');
+      const inrSubElem = document.getElementById('valuationOutputInrSub');
+      const ciDisplay = document.getElementById('ciText');
+      const cohortLow = document.getElementById('cohortLowPrice');
+      const cohortMedian = document.getElementById('cohortMedianPrice');
+      const cohortHigh = document.getElementById('cohortHighPrice');
+
+      if (priceLakhElem) {
+        priceLakhElem.textContent = `₹ ${formattedLakh} Lakh`;
+      }
+      if (inrSubElem) {
+        inrSubElem.textContent = `(₹ ${formattedInr} INR)`;
+      }
+
+      // Dynamic confidence bounds (RMSE ~ ₹ 55,579)
+      const rmseInr = 55579;
+      const lowInr = Math.max(125000, predInr - rmseInr);
+      const highInr = predInr + rmseInr;
+
+      if (ciDisplay) {
+        ciDisplay.textContent = `Expected Range: ₹ ${(lowInr/100000).toFixed(2)} Lakh – ₹ ${(highInr/100000).toFixed(2)} Lakh (± ₹ 55,579 RMSE)`;
+      }
+
+      if (cohortLow) cohortLow.textContent = formatLakhs(predInr * 0.82);
+      if (cohortMedian) cohortMedian.textContent = formatLakhs(predInr * 0.98);
+      if (cohortHigh) cohortHigh.textContent = formatLakhs(predInr);
+    }
+
+    function getCurrentCarPayload() {
+      return {
+        brand: mfgSelect ? mfgSelect.value : 'Kia',
+        model: modelSelect ? modelSelect.value : 'Seltos',
+        make_year: yearSlider ? parseInt(yearSlider.value) : 2022,
+        mileage_kmpl: parseNumeric(mileageInput ? mileageInput.value : 16.5, 16.5),
+        engine_cc: parseNumeric(engineInput ? engineInput.value : 1497, 1497),
+        fuel_type: selectedFuel,
+        transmission: selectedTrans,
+        color: selectedColor,
+        owner_count: ownersSlider ? parseInt(ownersSlider.value) : 1,
+        service_history: serviceSelect ? serviceSelect.value : 'Authorized Dealer',
+        accidents_reported: accidentCount,
+        insurance_valid: (insuranceToggle && insuranceToggle.checked) ? 'Yes' : 'No'
+      };
+    }
+
+    let debounceTimer = null;
+    function triggerPrediction() {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        const car = getCurrentCarPayload();
+        // 1. Instant client-side linear regression evaluation
+        const pred = calculateClientPrediction(car);
+        if (pred && !isNaN(pred.pred_inr)) {
+          updateDisplays(pred);
+        }
+
+        // 2. Optional server query if hosted on Flask /api/predict
+        fetch('/api/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(car)
+        })
+        .then(res => res.ok ? res.json() : null)
+        .then(data => {
+          if (data && data.success) {
+            const inrVal = Number(data.price_inr ?? data.prediction_inr);
+            const usdVal = Number(data.price_usd ?? data.prediction_usd);
+            if (!isNaN(inrVal) && inrVal > 0) {
+              updateDisplays({
+                pred_usd: usdVal,
+                pred_inr: inrVal,
+                formatted_lakh: (inrVal / 100000).toFixed(2),
+                formatted_inr: Math.round(inrVal).toLocaleString('en-IN')
+              });
+            }
+          }
+        })
+        .catch(() => {
+          // Static environment fallback
+        });
+      }, 50);
+    }
+
+    const calcBtn = document.getElementById('calcValuationBtn');
+    if (calcBtn) {
+      calcBtn.addEventListener('click', () => {
+        const originalText = calcBtn.innerHTML;
+        calcBtn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin text-black">refresh</span><span class="text-black">Computing Telemetry &amp; Regression Matrices...</span>';
+        calcBtn.disabled = true;
+
+        setTimeout(() => {
+          triggerPrediction();
+          calcBtn.innerHTML = originalText;
+          calcBtn.disabled = false;
+          const priceCard = document.getElementById('valuationOutputPrice');
+          if (priceCard) {
+            priceCard.classList.add('scale-105', 'transition-transform');
+            setTimeout(() => priceCard.classList.remove('scale-105'), 300);
+          }
+        }, 350);
+      });
+    }
+
+    // -----------------------------------------------------------------------
+    // L. FULLY FUNCTIONAL BULK CSV VALUATION ENGINE
+    // -----------------------------------------------------------------------
+    const sampleCsvData = `brand,model,make_year,mileage_kmpl,engine_cc,fuel_type,transmission,color,owner_count,service_history,accidents_reported,insurance_valid
+Maruti Suzuki,Swift,2021,22.4,1197,Petrol,Manual,White,1,Authorized Dealer,0,Yes
+Toyota,Fortuner,2023,14.2,2755,Diesel,Automatic,White,1,Authorized Dealer,0,Yes
+Hyundai,Creta,2022,17.0,1497,Petrol,Automatic,Silver,1,Authorized Dealer,0,Yes
+Mahindra,Thar,2022,15.2,1997,Diesel,Manual,Black,2,Partial,1,No
+Kia,Seltos,2020,16.5,1497,Petrol,Automatic,Grey,1,Authorized Dealer,0,Yes`;
+
+    function downloadSampleCsvFile() {
+      const blob = new Blob([sampleCsvData], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'car_fleet_valuation_template.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    const btnDownloadSample1 = document.getElementById('btnDownloadSampleCsv');
+    const btnDownloadSample2 = document.getElementById('btnDownloadSampleCsvTemplate');
+    if (btnDownloadSample1) btnDownloadSample1.addEventListener('click', downloadSampleCsvFile);
+    if (btnDownloadSample2) btnDownloadSample2.addEventListener('click', downloadSampleCsvFile);
+
+    function parseCsvString(csvText) {
+      const lines = csvText.trim().split(/\r?\n/).filter(line => line.trim().length > 0);
+      if (lines.length < 2) return [];
+      const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
+      const records = [];
+
+      for (let i = 1; i < lines.length; i++) {
+        const parts = lines[i].split(',').map(p => p.trim());
+        if (parts.length >= headers.length) {
+          const rowObj = {};
+          headers.forEach((h, idx) => {
+            rowObj[h] = parts[idx];
+          });
+          records.push(rowObj);
+        }
+      }
+      return records;
+    }
+
+    function processBulkCars(carsList) {
+      if (!carsList || carsList.length === 0) return;
+      const startTime = performance.now();
+      let totalInr = 0;
+      const evaluated = [];
+
+      carsList.forEach((car, index) => {
+        const payload = {
+          brand: car.brand || 'Maruti Suzuki',
+          model: car.model || 'Swift',
+          make_year: parseInt(car.make_year) || 2022,
+          mileage_kmpl: parseNumeric(car.mileage_kmpl, 18.0),
+          engine_cc: parseNumeric(car.engine_cc, 1497),
+          fuel_type: car.fuel_type || 'Petrol',
+          transmission: car.transmission || 'Manual',
+          color: car.color || 'White',
+          owner_count: parseInt(car.owner_count) || 1,
+          service_history: car.service_history || 'Authorized Dealer',
+          accidents_reported: parseInt(car.accidents_reported) || 0,
+          insurance_valid: car.insurance_valid || 'Yes'
+        };
+
+        const pred = calculateClientPrediction(payload);
+        totalInr += pred.pred_inr;
+
+        evaluated.push({
+          index: index + 1,
+          ...payload,
+          pred_usd: pred.pred_usd,
+          pred_inr: pred.pred_inr,
+          formatted_lakh: pred.formatted_lakh,
+          formatted_inr: pred.formatted_inr
+        });
+      });
+
+      const elapsed = (performance.now() - startTime).toFixed(1);
+      currentBulkEvaluatedCars = evaluated;
+
+      const resContainer = document.getElementById('bulkResultsContainer');
+      const totalVehiclesElem = document.getElementById('bulkTotalVehicles');
+      const totalValuationElem = document.getElementById('bulkTotalValuation');
+      const totalValuationInrElem = document.getElementById('bulkTotalValuationInr');
+      const avgValuationElem = document.getElementById('bulkAvgValuation');
+      const statusTextElem = document.getElementById('bulkStatusText');
+      const tbody = document.getElementById('bulkResultsTableBody');
+
+      if (resContainer) resContainer.classList.remove('hidden');
+      if (totalVehiclesElem) totalVehiclesElem.textContent = evaluated.length;
+      
+      const totalLakhs = (totalInr / 100000).toFixed(2);
+      if (totalValuationElem) {
+        if (totalInr >= 10000000) {
+          totalValuationElem.textContent = `₹ ${(totalInr / 10000000).toFixed(2)} Crore`;
+        } else {
+          totalValuationElem.textContent = `₹ ${totalLakhs} Lakh`;
+        }
+      }
+      if (totalValuationInrElem) {
+        totalValuationInrElem.textContent = `(₹ ${Math.round(totalInr).toLocaleString('en-IN')} INR)`;
+      }
+
+      const avgLakhs = ((totalInr / evaluated.length) / 100000).toFixed(2);
+      if (avgValuationElem) avgValuationElem.textContent = `₹ ${avgLakhs} Lakh`;
+
+      if (statusTextElem) {
+        statusTextElem.textContent = `Valuation Complete: ${evaluated.length} vehicles processed in ${elapsed} ms`;
+      }
+
+      if (tbody) {
+        tbody.innerHTML = '';
+        evaluated.forEach(item => {
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-primary/5 transition-colors';
+          tr.innerHTML = `
+            <td class="py-2.5 px-3 text-outline font-mono">${item.index}</td>
+            <td class="py-2.5 px-3 font-semibold text-white">${item.brand} ${item.model}</td>
+            <td class="py-2.5 px-3 text-on-surface">${item.make_year}</td>
+            <td class="py-2.5 px-3 text-on-surface-variant">${item.fuel_type} / ${item.transmission}</td>
+            <td class="py-2.5 px-3 text-on-surface-variant">${item.mileage_kmpl} km/l / ${item.engine_cc} CC</td>
+            <td class="py-2.5 px-3 text-on-surface-variant">${item.owner_count}</td>
+            <td class="py-2.5 px-3 text-right font-bold text-primary font-mono neon-lime-glow">₹ ${item.formatted_lakh} Lakh</td>
+            <td class="py-2.5 px-3 text-right text-on-surface font-mono">₹ ${item.formatted_inr}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      }
+    }
+
+    const fileInput = document.getElementById('bulkCsvFileInput');
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const text = event.target.result;
+            const parsed = parseCsvString(text);
+            if (parsed.length > 0) {
+              processBulkCars(parsed);
+            } else {
+              alert('Could not parse vehicles from the uploaded CSV. Please check formatting or download the sample template.');
+            }
+          };
+          reader.readAsText(file);
+        }
+      });
+    }
+
+    const btnDemoFleet = document.getElementById('btnLoadDemoFleet');
+    if (btnDemoFleet) {
+      btnDemoFleet.addEventListener('click', () => {
+        const parsed = parseCsvString(sampleCsvData);
+        processBulkCars(parsed);
+      });
+    }
+
+    const btnExportValuedCsv = document.getElementById('btnExportValuedCsv');
+    if (btnExportValuedCsv) {
+      btnExportValuedCsv.addEventListener('click', () => {
+        if (!currentBulkEvaluatedCars || currentBulkEvaluatedCars.length === 0) return;
+        const headers = ['brand','model','make_year','mileage_kmpl','engine_cc','fuel_type','transmission','color','owner_count','service_history','accidents_reported','insurance_valid','predicted_price_lakh','predicted_price_inr'];
+        const rows = [headers.join(',')];
+
+        currentBulkEvaluatedCars.forEach(c => {
+          rows.push([
+            c.brand,
+            c.model,
+            c.make_year,
+            c.mileage_kmpl,
+            c.engine_cc,
+            c.fuel_type,
+            c.transmission,
+            c.color,
+            c.owner_count,
+            c.service_history,
+            c.accidents_reported,
+            c.insurance_valid,
+            `₹ ${c.formatted_lakh} Lakh`,
+            c.pred_inr
+          ].join(','));
+        });
+
+        const csvContent = rows.join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'evaluated_automobile_fleet_valuations.csv';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+    }
+
+    // Initialize values
+    updateSummaryChip();
+    triggerPrediction();
+  });
+</script>
+</body>
+</html>

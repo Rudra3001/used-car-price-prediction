@@ -1,3 +1,4 @@
+```markdown
 # CARPRICE AI — Used Car Valuation Studio (₹ INR)
 
 An end-to-end Machine Learning system engineered for used automobile valuation in the Indian automotive market, featuring a leakage-free regression pipeline, sub-millisecond client-side telemetry, dual-mode deployment, and formal IEEE research publication documentation.
@@ -42,7 +43,9 @@ An end-to-end Machine Learning system engineered for used automobile valuation i
 
 ## 📁 Repository Structure
 
+
 ```
+
 ├── Dataset/                 # 10,000 verified automobile records (used_cars.csv)
 ├── graphs/                  # 19 EDA & model evaluation charts (.png)
 ├── models/                  # Serialized scikit-learn models & preprocessor (.pkl)
@@ -62,28 +65,41 @@ An end-to-end Machine Learning system engineered for used automobile valuation i
 ├── PROJECT_REPORT.md        # Comprehensive technical & academic project report
 ├── requirements.txt         # Minimal production dependencies
 └── .gitignore               # Clean git exclusions
+
 ```
 
 ---
 
 ## ⚡ Quick Start
 
-### 1. Run Locally with Flask
+### 1. Live Web Application (GitHub Pages)
+The standalone `index.html` web application is live and accessible directly in your browser without any setup:
+👉 **[https://rudra3001.github.io/used-car-price-prediction/](https://rudra3001.github.io/used-car-price-prediction/)**
+
+### 2. Run Locally with Flask
 ```bash
 pip install -r requirements.txt
 python server.py
 # or
 python app.py
+
 ```
+
 Open your browser at `http://localhost:7860`.
 
-### 2. Standalone Static Web App
+### 3. Standalone Static Web App (Local)
+
 Open `index.html` directly in any web browser for instant client-side prediction without a Python server.
 
 ---
 
 ## 📑 Academic Documentation
-- **Research Paper (Overleaf / IEEE Format):** `CARPRICE_AI_Research_Paper_Final.pdf`
-- **Presentation Slides:** `CARPRICE_AI_Research_Presentation_Final.pptx`
-- **Technical Report:** `PROJECT_REPORT.md`
-- **Research Notebook:** `notebooks/eda_and_model_training.ipynb`
+
+* **Research Paper (Overleaf / IEEE Format):** `CARPRICE_AI_Research_Paper_Final.pdf`
+* **Presentation Slides:** `CARPRICE_AI_Research_Presentation_Final.pptx`
+* **Technical Report:** `PROJECT_REPORT.md`
+* **Research Notebook:** `notebooks/eda_and_model_training.ipynb`
+
+```
+
+```

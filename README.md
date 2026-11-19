@@ -1,4 +1,3 @@
-```markdown
 # CARPRICE AI — Used Car Valuation Studio (₹ INR)
 
 An end-to-end Machine Learning system engineered for used automobile valuation in the Indian automotive market, featuring a leakage-free regression pipeline, sub-millisecond client-side telemetry, dual-mode deployment, and formal IEEE research publication documentation.
@@ -43,9 +42,7 @@ An end-to-end Machine Learning system engineered for used automobile valuation i
 
 ## 📁 Repository Structure
 
-
 ```
-
 ├── Dataset/                 # 10,000 verified automobile records (used_cars.csv)
 ├── graphs/                  # 19 EDA & model evaluation charts (.png)
 ├── models/                  # Serialized scikit-learn models & preprocessor (.pkl)
@@ -59,13 +56,10 @@ An end-to-end Machine Learning system engineered for used automobile valuation i
 ├── index.html               # Standalone client-side web application
 ├── static_model_weights.json # Serialized weights for client-side regression
 ├── CARPRICE_AI_Research_Paper_Final.pdf  # 5-Page IEEE Conference Research Paper
-├── CARPRICE_AI_Research_Paper.tex        # Overleaf / LaTeX IEEEtran Source Code
-├── CARPRICE_AI_Research_Paper_Final.docx # Editable Microsoft Word Research Paper
 ├── CARPRICE_AI_Research_Presentation_Final.pptx # Academic research slide deck
 ├── PROJECT_REPORT.md        # Comprehensive technical & academic project report
 ├── requirements.txt         # Minimal production dependencies
 └── .gitignore               # Clean git exclusions
-
 ```
 
 ---
@@ -82,24 +76,16 @@ pip install -r requirements.txt
 python server.py
 # or
 python app.py
-
 ```
-
 Open your browser at `http://localhost:7860`.
 
 ### 3. Standalone Static Web App (Local)
-
 Open `index.html` directly in any web browser for instant client-side prediction without a Python server.
 
 ---
 
 ## 📑 Academic Documentation
-
-* **Research Paper (Overleaf / IEEE Format):** `CARPRICE_AI_Research_Paper_Final.pdf`
-* **Presentation Slides:** `CARPRICE_AI_Research_Presentation_Final.pptx`
-* **Technical Report:** `PROJECT_REPORT.md`
-* **Research Notebook:** `notebooks/eda_and_model_training.ipynb`
-
-```
-
-```
+- **Research Paper (Overleaf / IEEE Format):** `CARPRICE_AI_Research_Paper_Final.pdf`
+- **Presentation Slides:** `CARPRICE_AI_Research_Presentation_Final.pptx`
+- **Technical Report:** `PROJECT_REPORT.md`
+- **Research Notebook:** `notebooks/eda_and_model_training.ipynb`

@@ -938,99 +938,9 @@
     </div>
 
     <!-- ========================================================================= -->
-    <!-- TAB 3: MARKET ANALYTICS (#tab-analytics) -->
-    <!-- ========================================================================= -->
-    <div id="tab-analytics" class="tab-pane hidden flex-col w-full space-y-6">
-      <div class="flex flex-col gap-1">
-        <div class="flex items-center gap-1.5 mb-1 flex-wrap">
-          <span class="font-label-sm text-xs uppercase tracking-wider text-outline">Exploratory Telemetry</span>
-          <span class="text-primary/60 text-xs">›</span>
-          <span class="font-label-sm text-xs text-primary font-semibold">10,000 Verified Market Records</span>
-        </div>
-        <h1 class="font-headline-xl text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Market Analytics &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Exploratory Insights</span>
-        </h1>
-        <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant max-w-2xl leading-relaxed">
-          Analytical charts across the 10,000 automobile dataset, uncovering price depreciation curves, brand equity indices, and powertrain correlations.
-        </p>
-      </div>
-
-      <!-- KPI Top Metric Cards -->
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-        <div class="p-4 rounded-xl cyber-glass border border-primary/30 space-y-1">
-          <div class="font-label-sm text-xs text-outline uppercase tracking-wider">Total Records</div>
-          <div class="font-headline-xl text-xl sm:text-2xl md:text-3xl text-primary font-extrabold neon-lime-glow">10,000</div>
-          <div class="text-[11px] text-on-surface-variant">Validated Instances</div>
-        </div>
-        <div class="p-4 rounded-xl cyber-glass border border-primary/30 space-y-1">
-          <div class="font-label-sm text-xs text-outline uppercase tracking-wider">Avg Selling Price</div>
-          <div class="font-headline-xl text-xl sm:text-2xl md:text-3xl text-white font-extrabold">₹ 14.28 L</div>
-          <div class="text-[11px] text-primary/80">Median: ₹ 13.65 L</div>
-        </div>
-        <div class="p-4 rounded-xl cyber-glass border border-primary/30 space-y-1">
-          <div class="font-label-sm text-xs text-outline uppercase tracking-wider">Year Span</div>
-          <div class="font-headline-xl text-xl sm:text-2xl md:text-3xl text-primary font-extrabold">2006 – 2026</div>
-          <div class="text-[11px] text-on-surface-variant">20-Year Spectrum</div>
-        </div>
-        <div class="p-4 rounded-xl cyber-glass border border-primary/30 space-y-1">
-          <div class="font-label-sm text-xs text-outline uppercase tracking-wider">Top Retainer</div>
-          <div class="font-headline-xl text-xl sm:text-2xl md:text-3xl text-white font-extrabold">Toyota</div>
-          <div class="text-[11px] text-primary font-bold">+14.2% Brand Equity</div>
-        </div>
-      </div>
-
-      <!-- Charts Responsive Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-        <div class="rounded-xl cyber-glass p-4 border border-primary/30 space-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="font-headline-md text-sm font-semibold text-white">01. Price Distribution (₹ INR)</h3>
-            <span class="text-[10px] font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Seaborn KDE</span>
-          </div>
-          <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
-            <img src="graphs/01_price_distribution.png" alt="Price Distribution" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform" onerror="this.parentElement.innerHTML='<div class=\'py-12 text-center text-xs text-on-surface-variant font-mono\'>[Chart: Price Distribution ₹ 2.5L to ₹ 48L]</div>'">
-          </div>
-          <p class="text-xs text-on-surface-variant">Normal right-skewed pricing distribution spanning ₹ 2.5 Lakh to ₹ 48 Lakh with peak clustering at ₹ 12–16 Lakh.</p>
-        </div>
-
-        <div class="rounded-xl cyber-glass p-4 border border-primary/30 space-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="font-headline-md text-sm font-semibold text-white">02. Selling Price vs. Car Age</h3>
-            <span class="text-[10px] font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Scatter + Fit</span>
-          </div>
-          <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
-            <img src="graphs/02_price_vs_car_age.png" alt="Price vs Age" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform" onerror="this.parentElement.innerHTML='<div class=\'py-12 text-center text-xs text-on-surface-variant font-mono\'>[Chart: Selling Price vs Vehicle Age -0.89 correlation]</div>'">
-          </div>
-          <p class="text-xs text-on-surface-variant">Strongest negative predictor (-0.89 correlation). Steady nonlinear depreciation observed across the 2006–2026 span.</p>
-        </div>
-
-        <div class="rounded-xl cyber-glass p-4 border border-primary/30 space-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="font-headline-md text-sm font-semibold text-white">03. Selling Price vs. Mileage (km/l)</h3>
-            <span class="text-[10px] font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Hexbin Density</span>
-          </div>
-          <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
-            <img src="graphs/03_price_vs_mileage.png" alt="Price vs Mileage" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform" onerror="this.parentElement.innerHTML='<div class=\'py-12 text-center text-xs text-on-surface-variant font-mono\'>[Chart: Price vs Mileage]</div>'">
-          </div>
-          <p class="text-xs text-on-surface-variant">Vehicles with 16–22 km/l maintain the highest transaction liquidity and market stability.</p>
-        </div>
-
-        <div class="rounded-xl cyber-glass p-4 border border-primary/30 space-y-2">
-          <div class="flex items-center justify-between">
-            <h3 class="font-headline-md text-sm font-semibold text-white">04. Engine Capacity (CC) vs. Valuation</h3>
-            <span class="text-[10px] font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Regression Fit</span>
-          </div>
-          <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
-            <img src="graphs/04_price_vs_engine_cc.png" alt="Price vs Engine CC" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform" onerror="this.parentElement.innerHTML='<div class=\'py-12 text-center text-xs text-on-surface-variant font-mono\'>[Chart: Engine Capacity vs Price]</div>'">
-          </div>
-          <p class="text-xs text-on-surface-variant">Strong positive relationship with displacement; high-capacity engines (&gt;2000 CC) demonstrate premium retention.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ========================================================================= -->
-    <!-- TAB 4: MODEL PERFORMANCE & BENCHMARKS (#tab-performance) -->
-    <!-- ========================================================================= -->
- <div id="tab-analytics" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+<!-- TAB: MARKET ANALYTICS (14 Exploratory Visualizations) -->
+<!-- ========================================================================= -->
+<div id="tab-analytics" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
   <div class="flex flex-col gap-1">
     <div class="flex items-center gap-2 mb-1">
       <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Exploratory Telemetry</span>
@@ -1137,77 +1047,201 @@
   </div>
 </div>
 
-    <!-- ========================================================================= -->
-    <!-- TAB 5: PROJECT INFO & ARCHITECTURE (#tab-info) -->
-    <!-- ========================================================================= -->
-    <div id="tab-info" class="tab-pane hidden flex-col w-full space-y-6">
-      <div class="flex flex-col gap-1">
-        <div class="flex items-center gap-1.5 mb-1 flex-wrap">
-          <span class="font-label-sm text-xs uppercase tracking-wider text-outline">System Blueprint</span>
-          <span class="text-primary/60 text-xs">›</span>
-          <span class="font-label-sm text-xs text-primary font-semibold">Technical Architecture</span>
+
+<!-- ========================================================================= -->
+<!-- TAB: MODEL PERFORMANCE & BENCHMARKS -->
+<!-- ========================================================================= -->
+<div id="tab-performance" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Empirical Validation</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">2,000 Independent Test Records</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Machine Learning <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Model Benchmarks</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Rigorous benchmarking of 4 supervised regression architectures evaluated on held-out test data (random_state=42) with strict zero-data-leakage pipeline.
+    </p>
+  </div>
+
+  <!-- Champion Model Banner -->
+  <div class="p-space-lg rounded-xl cyber-glass border border-primary/50 relative overflow-hidden shadow-[0_0_25px_rgba(163,230,53,0.15)]">
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-primary to-lime-300"></div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+          <span class="text-xs font-mono font-bold text-primary uppercase tracking-widest">DEPLOYED PRODUCTION CHAMPION</span>
         </div>
-        <h1 class="font-headline-xl text-2xl sm:text-3xl font-bold text-white tracking-tight">
-          Project Architecture &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Telemetry Specifications</span>
-        </h1>
-        <p class="font-body-sm text-xs sm:text-sm text-on-surface-variant max-w-2xl leading-relaxed">
-          Full technical documentation of the CARPRICE AI system: data engineering pipeline, zero-leakage training workflow, Indian Rupee calibration, and dual-mode inference.
+        <h2 class="text-2xl font-bold text-white mt-1">Linear Regression (Optimized OLS Pipeline)</h2>
+        <p class="text-sm text-on-surface-variant mt-1">
+          Achieved superior test accuracy with near-instant client inference (0.4ms) and zero data leakage.
         </p>
       </div>
-
-      <div class="p-4 sm:p-6 rounded-xl cyber-glass border border-primary/30 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 shadow-lg">
-        <div class="relative group shrink-0">
-          <div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-500/50 rounded-2xl blur-md opacity-75"></div>
-          <img src="static/logo.jpg" onerror="this.src='logo.jpg'" alt="CARPRICE AI Official Emblem" class="relative w-20 h-20 sm:w-28 sm:h-28 rounded-2xl object-cover border-2 border-primary/50 shadow-[0_0_25px_rgba(163,230,53,0.4)]" />
+      <div class="flex items-center gap-4">
+        <div class="text-right">
+          <div class="text-xs text-outline uppercase font-mono">Test R² Score</div>
+          <div class="text-3xl font-mono font-extrabold text-primary neon-lime-glow">0.9946</div>
         </div>
-        <div class="space-y-1 text-center sm:text-left">
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/40 text-primary font-mono text-xs">
-            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
-            Indian Valuation Engine — Official Emblem
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">CARPRICE AI <span class="text-primary font-mono text-sm sm:text-base">(v4.2)</span></h2>
-          <p class="text-xs text-on-surface-variant leading-relaxed max-w-2xl">
-            Autonomous valuation platform engineered for India's automobile market across 10 top OEMs, 43 passenger models, 2006–2026 manufacturing spectrum, and leakage-free algorithmic regression inference.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        <div class="p-5 rounded-xl cyber-glass border border-primary/30 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-sm">
-            <span class="material-symbols-outlined text-[22px]">database</span>
-          </div>
-          <h3 class="text-base font-bold text-white">10,000 Verified Records</h3>
-          <p class="text-xs text-on-surface-variant leading-relaxed">
-            Empirical dataset spanning 10 brands, 43 models, and manufacturing years 2006 to 2026. Features include mileage, engine capacity, ownership counts, and service logs.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-xl cyber-glass border border-primary/30 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-sm">
-            <span class="material-symbols-outlined text-[22px]">security</span>
-          </div>
-          <h3 class="text-base font-bold text-white">Leakage-Free 80:20 Split</h3>
-          <p class="text-xs text-on-surface-variant leading-relaxed">
-            StandardScaler and OneHotEncoder were fitted exclusively on 8,000 training cars before transforming the 2,000 test cars, preventing feature leakage and optimistic bias.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-xl cyber-glass border border-primary/30 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-sm">
-            <span class="material-symbols-outlined text-[22px]">currency_rupee</span>
-          </div>
-          <h3 class="text-base font-bold text-white">Indian Rupee (₹ INR) Engine</h3>
-          <p class="text-xs text-on-surface-variant leading-relaxed">
-            Dynamic conversion into Indian Lakhs (₹ 18.25 Lakh) and full INR amounts, calibrated with confidence intervals derived from the model's test RMSE (± ₹ 55,579).
-          </p>
+        <div class="text-right border-l border-primary/30 pl-4">
+          <div class="text-xs text-outline uppercase font-mono">Test RMSE</div>
+          <div class="text-3xl font-mono font-bold text-white">₹ 55,579</div>
+          <div class="text-[11px] text-primary/80">Optimal Calibration</div>
         </div>
       </div>
     </div>
+  </div>
 
-  </main>
+  <!-- Benchmarking Comparison Table -->
+  <div class="rounded-xl cyber-glass border border-primary/30 overflow-hidden shadow-lg">
+    <div class="p-space-md border-b border-primary/20 flex items-center justify-between">
+      <h3 class="font-headline-md text-body-md font-bold text-white">4 Supervised Algorithms Benchmark Summary</h3>
+      <span class="text-xs font-mono text-primary">N = 2,000 Test Rows</span>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left font-body-sm text-body-sm">
+        <thead class="bg-[#07170a] border-b border-primary/20 text-xs font-mono text-outline uppercase">
+          <tr>
+            <th class="py-3 px-4">Algorithm</th>
+            <th class="py-3 px-4">Test R²</th>
+            <th class="py-3 px-4">RMSE (₹ INR)</th>
+            <th class="py-3 px-4">MAE (₹ INR)</th>
+            <th class="py-3 px-4">Inference Latency</th>
+            <th class="py-3 px-4 text-right">Production Status</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-primary/10">
+          <tr class="bg-primary/10 font-medium">
+            <td class="py-3 px-4 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span class="text-white font-bold">Linear Regression (Champion)</span>
+            </td>
+            <td class="py-3 px-4 font-mono text-primary font-bold">0.9946</td>
+            <td class="py-3 px-4 font-mono text-white">₹ 55,579</td>
+            <td class="py-3 px-4 font-mono text-white">₹ 38,909</td>
+            <td class="py-3 px-4 font-mono text-primary">0.4 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-primary text-black font-bold text-xs">Active Engine</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">Random Forest Regressor (n=100)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9934</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 61,438</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 42,120</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">18.2 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">XGBoost Regressor (Extreme Gradient Boosting)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9934</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 61,480</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 42,390</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">7.8 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+          <tr class="hover:bg-primary/5 transition-colors">
+            <td class="py-3 px-4 text-white">Gradient Boosting Regressor (sklearn)</td>
+            <td class="py-3 px-4 font-mono text-on-surface">0.9917</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 68,950</td>
+            <td class="py-3 px-4 font-mono text-on-surface">₹ 47,810</td>
+            <td class="py-3 px-4 font-mono text-on-surface-variant">9.4 ms</td>
+            <td class="py-3 px-4 text-right"><span class="px-2 py-0.5 rounded bg-surface-container text-outline text-xs">Validated</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Performance Plots -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">Actual vs. Predicted Valuations (R² = 0.9946)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Diagonal OLS</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/11_actual_vs_predicted_prices.png" alt="Actual vs Predicted" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+    </div>
+
+    <div class="rounded-xl cyber-glass p-space-md border border-primary/30 space-y-2">
+      <div class="flex items-center justify-between">
+        <h3 class="font-headline-md text-body-md font-semibold text-white">Model Comparison Metrics (R², RMSE, MAE)</h3>
+        <span class="text-xs font-mono text-primary px-2 py-0.5 rounded bg-primary/10 border border-primary/30">Bar Chart</span>
+      </div>
+      <div class="rounded-lg overflow-hidden bg-black/60 border border-primary/20 p-2">
+        <img src="graphs/13_model_comparison_metrics.png" alt="Model Comparison Metrics" class="w-full h-auto object-contain rounded hover:scale-[1.02] transition-transform"/>
+      </div>
+    </div>
+  </div>
 </div>
 
+
+<!-- ========================================================================= -->
+<!-- TAB: PROJECT INFO & ARCHITECTURE -->
+<!-- ========================================================================= -->
+<div id="tab-info" class="tab-pane hidden flex-col w-full space-y-space-lg pt-space-md">
+  <div class="flex flex-col gap-1">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">System Blueprint</span>
+      <span class="text-primary/60 text-xs">›</span>
+      <span class="font-label-sm text-label-sm text-primary font-semibold">Technical Architecture</span>
+    </div>
+    <h1 class="font-headline-xl text-3xl font-bold text-white tracking-tight">Project Architecture &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400 neon-lime-glow">Telemetry Specifications</span></h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+      Full technical documentation of the CARPRICE AI system: data engineering pipeline, zero-leakage training workflow, Indian Rupee calibration, and dual-mode inference.
+    </p>
+  </div>
+
+  <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 flex flex-col sm:flex-row items-center gap-6 mb-6 shadow-[0_0_20px_rgba(163,230,53,0.15)]">
+      <div class="relative group shrink-0">
+        <div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-500/50 rounded-2xl blur-md opacity-75"></div>
+        <img src="static/logo.jpg" onerror="this.src='logo.jpg'" alt="CARPRICE AI Official Emblem" class="relative w-28 h-28 rounded-2xl object-cover border-2 border-primary/50 shadow-[0_0_25px_rgba(163,230,53,0.4)]" />
+      </div>
+      <div class="space-y-1 text-left">
+        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/40 text-primary font-mono text-xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Indian Valuation Engine — Official Emblem
+        </div>
+        <h2 class="text-2xl font-bold text-white tracking-tight">CARPRICE AI <span class="text-primary font-mono text-base">(Indian Valuation Engine)</span></h2>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          Autonomous bio-synthetic kinetic valuation platform engineered for India's automobile market across 10 top OEMs, 43 passenger models, 2006–2026 manufacturing spectrum, and leakage-free algorithmic regression inference.
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">database</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">10,000 Verified Records</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Empirical dataset spanning 10 brands, 43 models, and manufacturing years 2006 to 2026. Features include mileage, engine capacity, ownership counts, service logs, and accident claim history.
+      </p>
+    </div>
+
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">security</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">Leakage-Free 80:20 Split</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        StandardScaler and OneHotEncoder were fitted exclusively on 8,000 training cars before transforming the 2,000 test cars, preventing feature leakage and optimistic bias.
+      </p>
+    </div>
+
+    <div class="p-space-lg rounded-xl cyber-glass border border-primary/30 space-y-3">
+      <div class="w-10 h-10 rounded-xl bg-primary/20 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_15px_rgba(163,230,53,0.3)]">
+        <span class="material-symbols-outlined text-[24px]">currency_rupee</span>
+      </div>
+      <h3 class="text-lg font-bold text-white">Indian Rupee (₹ INR) Engine</h3>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Dynamic conversion into Indian Lakhs (₹ 18.25 Lakh) and full INR amounts (₹ 18,24,475), calibrated with confidence intervals derived from the model's test RMSE (± ₹ 55,579).
+      </p>
+    </div>
+  </div>
+</div>
+
+</main></div>
 <script>
   // =========================================================================
   // 1. HERO COSMIC PARTICLE VORTEX CANVAS (RESPONSIVE AUTO-RESIZING)
